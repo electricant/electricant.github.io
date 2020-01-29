@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="description" content="Pol's website." />
+
+<link rel="icon" type="image/png" sizes="192x192" href="/res/img/favicon192.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/res/img/favicon128.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/res/img/favicon64.png">
+<link rel="shortcut-icon" type="image/png" href="/res/img/favicon64.png">
+
+<link rel="stylesheet" href="/res/css/style.css">
+<link rel="styleshet" href="/res/css/foundation-icons.css">
+
+<title>Paolo Scaramuzza</title>
+</head>
+<body>
+<div class="header">
+	<div class="headerdata">
+		<h1><a class="homelink" href="/">Paolo Scaramuzza</a></h1>
+	</div>
+	<div class="navbar">
+		<a href="/">HOME</a> |
+		<a href="/article-index.html">ARTICLES</a> |
+		<a href="/random.html">RANDOM STUFF</a> |
+		<a href="/now.html">NOW</a> |
+		<a href="/about.html">ABOUT</a>
+	</div>
+</div>
+
+<div id="content" class="content">
+	<div id="text" class="tile text">
+	<!-- Article text -->
+<h1>Linux VMs with qemu</h1><h2>Introduction</h2><p>Sometimes I have to test various network configurations involving linux machines. </p><p>Sometimes I use my own PC and some other device such as a Raspberry pi this has the advantage that each device physically exists and can be poked at. The main drawback is that the setup is cumbersome and time consuming and there's the risk of screwing something up with the configuration of my main laptop. </p><p>The ideal would be to have a bunch of virtual machines connected together through some network interfaces, each one doing its thing independently. The VMs have also connected to the internet in order to download the required packages and updates. </p><p>As an added bonus the test setup should be repeatable and has to be launched easily from the command line. </p><p>This page contains some notes on how I accomplished such thing. </p><h2>Guest OS installation</h2><p>I won't go into the details of installing a linux guest OS in qemu as there's plenty of guides on the internet <a href="https://wiki.archlinux.org/index.php/QEMU" title="QEMU - ArchWiki -">[1]</a>. </p><h2>Startup Script</h2><p>Let's get straight into it. This is the setup I use for launching a server with three clients. Each machine is connected to the internet and to each other through a virtual layer 2 switch <a href="https://en.wikipedia.org/wiki/LAN_switching" title="LAN switching - Wikipedia -">[2]</a>. Please note that this script requires root privileges to be effective. </p><pre><code>#!/bin/bash  
+ 
+# Amount of RAM each VM is given  
+RAM_SIZE_MB=512  
+ 
+# Additional qemu options  
+QEMU_OPTIONS="-enable-kvm -vga std"  
+ 
+# interface names  
+TAP_SERVER=tapSrv0  
+TAP1=tap1  
+TAP2=tap2  
+BRIDGE=brVrt0  
+ 
+# Preliminary network interface setup (requires root privieges)  
+sudo ip tuntap add $TAP_SERVER mode tap user `whoami`  
+sudo ip link set $TAP_SERVER up  
+ 
+sudo ip tuntap add $TAP1 mode tap user `whoami`  
+sudo ip link set $TAP1 up  
+ 
+sudo ip tuntap add $TAP2 mode tap user `whoami`  
+sudo ip link set $TAP2 up  
+ 
+sudo ip link add $BRIDGE type bridge  
+sudo ip link set $BRIDGE up  
+ 
+sudo ip link set $TAP_SERVER master $BRIDGE  
+sudo ip link set $TAP1 master $BRIDGE  
+sudo ip link set $TAP2 master $BRIDGE  
+ 
+# Start the testbench  
+qemu-system-i386 $QEMU_OPTIONS -m $RAM_SIZE_MB \  
+	-netdev tap,id=vlan0,ifname=$TAP_SERVER \  
+	-device e1000,netdev=vlan0,mac=52:54:00:00:00:01 \  
+	-netdev user,id=user0 -device e1000,netdev=user0 -hda server.cow &amp;  
+ 
+qemu-system-i386 $QEMU_OPTIONS -m $RAM_SIZE_MB \  
+	-netdev tap,id=vlan0,ifname=$TAP1 \  
+	-device e1000,netdev=vlan0,mac=52:54:00:00:00:02 \  
+	-netdev user,id=user0 -device e1000,netdev=user0 -hda client1.cow &amp;  
+ 
+qemu-system-i386 $QEMU_OPTIONS -m $RAM_SIZE_MB \  
+	-netdev tap,id=vlan0,ifname=$TAP2 \  
+	-device e1000,netdev=vlan0,mac=52:54:00:00:00:03 \  
+	-netdev user,id=user0 -device e1000,netdev=user0 -hda client2.cow &amp;  
+ 
+# Wait for background jobs to terminate  
+wait  
+ 
+# Interface teardown  
+sudo ip tuntap del $TAP_SERVER mode tap  
+sudo ip tuntap del $TAP1 mode tap  
+sudo ip tuntap del $TAP2 mode tap  
+ 
+sudo ip link del $BRIDGE </code></pre><p>The most difficult part was getting the interface setup right, both from the host and guest perspective. There's plenty of outdated and misleading guides around the web. </p><p>The first thing to note is that qemu requires a device instance for each declared netdev. To do so we have to add an id to each netdev (<code>-netdev id=netdev_id,netdev_type</code>) and then attach a device to it like so <code>-device hw_type,netdev=netdev_id</code>. As it can be seen this is done twice, the first time for the <code>tap</code> device and the second for an <code>user</code> device. Refer to the guide about qemu networking <a href="http://wiki.qemu-project.org/Documentation/Networking" title="Documentation/Networking - qemu project -">[3]</a> for details about the role of each device. </p><p>Then in order to get the network topology we like we have to create and bridge together the tap interfaces at the host side. This has to be done before starting the various virtual machines. The commands have been taken from <a href="https://www.linux-kvm.org/page/Networking" title="Networking - KVM -">[4]</a> and adapted a bit to the situation. </p><p>Each virtual machine is started as a background job (note the <code>&amp;</code> at the end) so before tearing down the network we issue a <code>wait</code> command which halts the script until all the jobs terminate. </p><h2>References</h2><ol><li><a href="https://wiki.archlinux.org/index.php/QEMU" title="QEMU - ArchWiki -">QEMU - ArchWiki -</a> </li><li><p><a href="https://en.wikipedia.org/wiki/LAN_switching" title="LAN switching - Wikipedia -">LAN switching - Wikipedia -</a> </p></li><li><p><a href="http://wiki.qemu-project.org/Documentation/Networking" title="Documentation/Networking - qemu project -">Documentation/Networking - qemu project -</a> </p></li><li><a href="https://www.linux-kvm.org/page/Networking" title="Networking - KVM -">Networking - KVM -</a> </li></ol>
+	</div> <!-- text -->
+</div> <!-- content -->
+</body>
+</html>
