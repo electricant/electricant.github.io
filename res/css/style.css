@@ -85,7 +85,7 @@ body {
 .text p {
 	margin: 0.5em 0 0.5em 0;
 }
-.circlephoto{
+.circlephoto {
 	--diameter: 220px;
 	width: var(--diameter);
 	height: var(--diameter);
@@ -95,6 +95,25 @@ body {
 	background: url(/res/img/photo-220.jpg) no-repeat;
 	background-color: #F2F1EF;
 }
+figure {
+	width: max-content;
+	max-width: 75%;
+	min-width: 250px;
+	text-align: center;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+figure img {
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	padding: 2px;
+	width: calc(100% - 10px);
+}
+figure img:hover {
+	box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
 /* responsive layout */
 @media (max-width: 800px) {
 	.header {
