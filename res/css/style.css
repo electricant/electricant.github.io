@@ -67,8 +67,8 @@ body {
 	min-width: 300px;
 }
 .tile {
-	color: #212121;
-	background-color: #F8F8F8;
+	color: rgba(0,0,0, 0.9);;
+	background-color: rgba(255,255,255, 0.9);
 	border-radius: 2px;
 	box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
 	padding: 1em;
