@@ -382,7 +382,14 @@ created 237 files
 created 20 directories  
 created 109 symlinks  
 created 23 devices  
-created 0 fifos </code></pre><p>Now we are talking! Well... not really. If we rebuild the filesystem once again as we did before, the only difference now is filesystem size. However, the router is still stuck in a bootloop. A quick check to the size of the final flash image size confirms that the new image is not too big to fit in the flash chip. What is still missing is the correct compression algorithm. By looking at the output above we see that lzma-adaptive compression was detected. Version 2.2 of mksquashfs does not support lzma compression by default. A working copy of squashfs-lzma <a href="https://squashfs-lzma.org/">[10]</a> is needed. But I was fed up of blindly trying stuff until something works, so I downloaded the GPL code <a href="http://www.netis-systems.com/Suppory/gpl.html">[11]</a> (thanks Richard Stallman) for my router model and started inspecting the package contents to find some clues about how the flash image is built. </p><h3>GPL Code is Fun</h3><p>Inside the image the directory <tt> GPL<em>Code</em>RTL/rtl819x-sdk-v1.2/AP/squashfs-tools</tt>  is found. After copying it somewhere else, the code inside such directory was patched in a similar fashion as SquashFS 2.2-r2. </p><p>$ diff -ru squashfs-tools-orig squashfs-tools/ 	--- squashfs-tools-orig/Makefile	2013-11-10 14:56:41.000000000 +0100 	+++ squashfs-tools/Makefile	2020-08-17 15:37:34.758142333 +0200 	@@ -1,7 +1,8 @@ 	 INCLUDEDIR = . 	 LZMAPATH = ./lzma/SRC/7zip/Compress/LZMA_Lib </p><pre><code>-CFLAGS := -I$(INCLUDEDIR) -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -O2  
+created 0 fifos </code></pre><p>Now we are talking! Well... not really. If we rebuild the filesystem once again as we did before, the only difference now is filesystem size. However, the router is still stuck in a bootloop. A quick check to the size of the final flash image size confirms that the new image is not too big to fit in the flash chip. What is still missing is the correct compression algorithm. By looking at the output above we see that lzma-adaptive compression was detected. Version 2.2 of mksquashfs does not support lzma compression by default. A working copy of squashfs-lzma <a href="https://squashfs-lzma.org/">[10]</a> is needed. But I was fed up of blindly trying stuff until something works, so I downloaded the GPL code <a href="http://www.netis-systems.com/Suppory/gpl.html">[11]</a> (thanks Richard Stallman) for my router model and started inspecting the package contents to find some clues about how the flash image is built. </p><h3>GPL Code is Fun</h3><p>Inside the image the directory <tt> GPL_Code_RTL/rtl819x-sdk-v1.2/AP/squashfs-tools</tt>  is found. After copying it somewhere else, the code inside such directory was patched in a similar fashion as SquashFS 2.2-r2. </p><pre><code>$ diff -ru squashfs-tools-orig squashfs-tools/  
+--- squashfs-tools-orig/Makefile	2013-11-10 14:56:41.000000000 +0100  
++++ squashfs-tools/Makefile	2020-08-17 15:37:34.758142333 +0200  
+@@ -1,7 +1,8 @@  
+ INCLUDEDIR = .  
+ LZMAPATH = ./lzma/SRC/7zip/Compress/LZMA_Lib  
+ 
+-CFLAGS := -I$(INCLUDEDIR) -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -O2  
 +CFLAGS := -I$(INCLUDEDIR) -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -O2 \  
 +	-fcommon -std=gnu89  
  
@@ -402,4 +409,4 @@ created 0 fifos </code></pre><p>Now we are talking! Well... not really. If we re
 </div> <!-- content -->
 </body>
 </html>
-<!-- Build timestamp: 2020-09-23T16:07:03.808031+02:00 -->
+<!-- Build timestamp: 2020-09-23T16:13:28.176767+02:00 -->
