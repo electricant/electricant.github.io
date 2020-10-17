@@ -116,6 +116,12 @@ figure img:hover {
 code {
 	display: block;
 	overflow: auto;
+	padding-left: 1.5em;
+	background-color: rgba(0, 0, 0, 0.05);
+	padding: 1em 1.5em;
+	border: 1px solid #ddd;
+	border-left: 3px solid #D3643B;
+	border-radius: 1px;
 }
 
 /* responsive layout */
