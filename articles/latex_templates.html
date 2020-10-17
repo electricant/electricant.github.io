@@ -34,7 +34,7 @@
 <div id="content" class="content">
 	<div id="text" class="tile text">
 	<!-- Article text -->
-<h1>LaTeX Templates</h1><p>I was recently looking for some instructions about templates for a presentation written using the <a href="https://en.wikipedia.org/wiki/Beamer_%28LaTeX%29">Beamer</a> document class in LaTeX. </p><p>The aim of this page is to collect some instructions and a few bits I learned during the process. I also plan to keep this page updated with stuff about LaTeX in general (hopefully). </p><h2>Guides</h2><p>Firs off some useful guides: </p><ul><li><a href="https://www.hartwork.org/beamer-theme-matrix/">Beamer Theme Matrix</a> <br>  For choosing a base theme and its variant. </li><li><a href="http://hamaluik.com/posts/better-beamer-themes/">Better Beamer Themes</a> <br>  For some basic instructions on creating a theme. </li></ul><h2>Boilerplate code</h2><p>Now some boilerplate code for a presentation: </p><pre><code>\documentclass[a4paper]{beamer}  
+<h1>LaTeX Templates</h1><p>I was recently looking for some instructions about templates for a presentation written using the <a href="https://en.wikipedia.org/wiki/Beamer_%28LaTeX%29">Beamer</a> document class in LaTeX. </p><p>The aim of this page is to collect some instructions and a few bits I learned during the process. I also plan to keep this page updated with stuff about LaTeX in general (hopefully). </p><h2>Guides</h2><p>Firs off some useful guides: </p><ul><li><a href="https://www.hartwork.org/beamer-theme-matrix/">Beamer Theme Matrix</a> <br>  For choosing a base theme and its variant. </li><li><a href="http://hamaluik.com/posts/better-beamer-themes/">Better Beamer Themes</a> <br>  For some basic instructions on creating a theme. </li></ul><h2>Boilerplate code</h2><h3>Presentation</h3><p>Now some boilerplate code for a presentation: </p><pre><code>\documentclass[a4paper]{beamer}  
 \usetheme{%%yourtheme}  
  
 \usepackage{mathtools}  
@@ -60,7 +60,7 @@
 \begin{frame}  
 	\maketitle  
 \end{frame}  
-\end{document} </code></pre><p>Also some code for an article: </p><p><strong>NOTE:</strong> This code requires the IEEEtran document class which can be downloaded from <a href="http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/">here</a>. On debian-based GNU/linux systems IEEEtran and some other useful packages can be installed with <code>sudo apt-get install texlive-publishers</code>. There ought to be something similar in other distros as well. Search your package manager. </p><pre><code>\documentclass[journal, a4paper, 12pt]{IEEEtran}  
+\end{document} </code></pre><h3>Article</h3><p>Also some code for an article: </p><p><strong>NOTE:</strong> This code requires the IEEEtran document class which can be downloaded from <a href="http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/">here</a>. On debian-based GNU/linux systems IEEEtran and some other useful packages can be installed with: <tt> sudo apt-get install texlive-publishers</tt> . </p><pre><code>\documentclass[journal, a4paper, 12pt]{IEEEtran}  
  
 \title{The title}  
 \author{The author}  
@@ -80,9 +80,9 @@
  
 % Sections and subsections as usual  
  
-\end{document} </code></pre><p>Refer to <a href="http://www.texdoc.net/texmf-dist/doc/latex/IEEEtran/IEEEtran_HOWTO.pdf">http://www.texdoc.net/texmf-dist/doc/latex/IEEEtran/IEEEtran_HOWTO.pdf</a> for more details. </p><h2>Custom University of Padova Theme</h2><p>During my PhD at the University of Padova (Department of Information Engineering) I often need some theme for a presentation. </p><p>A good one can be found <a href="https://andrea.burattin.net/stuff/tema-latex-beamer-padova/">here</a>. I used this theme as a starting point to create my own variation, adding the depatment logo and modifying the style a bit. Best results can be obtained using the presentation template above. The theme assumes that the last frame is the same as the first one. </p><p>Download the theme from <a href="https://github.com/electricant/beamerThemePadovaDEI">my github repo</a> and install it or put the files in the same directory as your presentation. Then use it with <code>\usetheme{PadovaDEI}</code>. </p>
+\end{document} </code></pre><p>Refer to <a href="http://www.texdoc.net/texmf-dist/doc/latex/IEEEtran/IEEEtran_HOWTO.pdf">http://www.texdoc.net/texmf-dist/doc/latex/IEEEtran/IEEEtran_HOWTO.pdf</a> for more details. </p><h2>Custom University of Padova Theme</h2><p>During my PhD at the University of Padova (Department of Information Engineering) I often need some theme for a presentation. </p><p>A good one can be found <a href="https://andrea.burattin.net/stuff/tema-latex-beamer-padova/">here</a>. I used this theme as a starting point to create my own variation, adding the depatment logo and modifying the style a bit. Best results can be obtained using the presentation template above. The theme assumes that the last frame is the same as the first one. </p><p>Download the theme from <a href="https://github.com/electricant/beamerThemePadovaDEI">my github repo</a> and install it or put the files in the same directory as your presentation. Then use it with <tt> \usetheme{PadovaDEI}</tt> . </p>
 	</div> <!-- text -->
 </div> <!-- content -->
 </body>
 </html>
-<!-- Build timestamp: 2020-10-17T20:22:56.838755+02:00 -->
+<!-- Build timestamp: 2020-10-17T21:24:52.009887+02:00 -->
