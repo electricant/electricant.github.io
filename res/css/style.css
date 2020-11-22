@@ -5,6 +5,8 @@
 	--body-background: 246, 246, 246;
 	--text-color: rgba(0, 0, 0, 0.9);
 	--text-background: rgba(255, 255, 255, 0.9);
+	--font-size: 21px;
+	--font-size-small-screen: 20px;
 	/* Box shadows for cards and stuff */
 	--box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.6);
 	/* control edge sharpness for various elements */
@@ -88,7 +90,7 @@ body {
 }
 .text {
 	line-height: 1.55;
-	font-size: 21px;
+	font-size: var(--font-size);
 	padding: 2em;
 	text-align: justify;
 }
@@ -130,6 +132,7 @@ figure img:hover {
 code {
 	display: block;
 	overflow: auto;
+	font-size: var(--font-size);
 	padding-left: 1.5em;
 	background-color: rgba(0, 0, 0, 0.05);
 	padding: 1em 1.5em;
@@ -169,7 +172,10 @@ code {
 	.text {
 		padding-left: 1em;
 		padding-right: 1em;
-		font-size: 20px;
+		font-size: var(--font-size-small-screen);
+	}
+	code {
+		font-size: var(--font-size-small-screen);
 	}
 }
 @media (max-width: 500px) {
