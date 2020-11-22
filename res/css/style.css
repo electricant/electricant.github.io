@@ -87,8 +87,8 @@ body {
 	margin: 1em;
 }
 .text {
-	line-height: 1.6;
-	font-size: clamp(18px, 4.5vw, 21px);
+	line-height: 1.55;
+	font-size: 21px;
 	padding: 2em;
 	text-align: justify;
 }
@@ -169,6 +169,7 @@ code {
 	.text {
 		padding-left: 1em;
 		padding-right: 1em;
+		font-size: 20px;
 	}
 }
 @media (max-width: 500px) {
