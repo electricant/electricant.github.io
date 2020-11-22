@@ -173,6 +173,7 @@ code {
 		padding-left: 1em;
 		padding-right: 1em;
 		font-size: var(--font-size-small-screen);
+		word-wrap: break-word;
 	}
 	code {
 		font-size: var(--font-size-small-screen);
