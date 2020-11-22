@@ -87,7 +87,8 @@ body {
 	margin: 1em;
 }
 .text {
-	line-height: 1.5;
+	line-height: 1.6;
+	font-size: clamp(16px, 4.25vw, 19px);
 	padding: 2em;
 	text-align: justify;
 }
