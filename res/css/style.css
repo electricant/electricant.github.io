@@ -88,7 +88,7 @@ body {
 }
 .text {
 	line-height: 1.6;
-	font-size: clamp(16px, 4.25vw, 19px);
+	font-size: clamp(18px, 4.5vw, 21px);
 	padding: 2em;
 	text-align: justify;
 }
@@ -144,7 +144,7 @@ code {
 		min-width: auto;
 	}
 	.content {
-		width: 80%
+		width: 85%
 	}
 	.recent {
 		float: none;
