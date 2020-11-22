@@ -6,7 +6,7 @@
 	--text-color: rgba(0, 0, 0, 0.9);
 	--text-background: rgba(255, 255, 255, 0.9);
 	/* Box shadows for cards and stuff */
-	--box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+	--box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.6);
 	/* control edge sharpness for various elements */
 	--border-radius: 1.5px;
 }
