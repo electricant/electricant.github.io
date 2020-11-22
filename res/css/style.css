@@ -1,3 +1,15 @@
+:root {
+	/* This is also the accent color of the website */
+	--header-background: #D3643B;
+	/* Keep the three components separated as sometimes alpha is added */
+	--body-background: 246, 246, 246;
+	--text-color: rgba(0, 0, 0, 0.9);
+	--text-background: rgba(255, 255, 255, 0.9);
+	/* Box shadows for cards and stuff */
+	--box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+	/* control edge sharpness for various elements */
+	--border-radius: 1.5px;
+}
 @font-face {
     font-family: 'Alegreya';
     src: url('/res/fonts/Alegreya-Regular.ttf') format('truetype');
@@ -17,7 +29,7 @@
 	font-style: normal;
 }
 body {
-	background-color: #F6F6F6;
+	background-color: rgb(var(--body-background));
 	margin: 0;
 	padding-bottom: 1em;
 	font-family: Alegreya, Serif;
@@ -25,8 +37,8 @@ body {
 }
 .header {
 	font-family: GrundschriftRegular, Sans-Serif;
-	background-color: #D3643B;
-	color: #F6F6F6;
+	background-color: var(--header-background);
+	color: rgb(var(--body-background));
 	margin: 0;
 	padding: 1em;
 	min-width: 60em;
@@ -54,12 +66,12 @@ body {
 	color: inherit;
 	text-decoration: none;
 	text-shadow: 1px 1px rgba(0, 0, 0, 0.15);
-	border-bottom: 1px solid rgba(242, 241, 239, 0);
+	border-bottom: 1px solid rgba(var(--body-background), 0);
 	transition: border 300ms ease;
 	white-space: nowrap;
 }
 .navbar a:hover {
-	border-bottom: 1px solid rgba(242, 241, 239, 1);
+	border-bottom: 1px solid rgba(var(--body-background), 1);
 }
 .content {
     margin: 0 auto;
@@ -67,10 +79,10 @@ body {
 	min-width: 300px;
 }
 .tile {
-	color: rgba(0,0,0, 0.9);;
-	background-color: rgba(255,255,255, 0.9);
-	border-radius: 2px;
-	box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+	color: var(--text-color);;
+	background-color: var(--text-background);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
 	padding: 1em;
 	margin: 1em;
 }
@@ -92,7 +104,7 @@ body {
 	height: var(--diameter);
 	border-radius: calc(var(--diameter) / 2);
 	margin: 1em auto 2em;
-	box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.5);
+	box-shadow: var(--box-shadow);
 	background: url(/res/img/photo-220.jpg) no-repeat;
 	background-color: #F2F1EF;
 }
@@ -107,7 +119,7 @@ figure {
 }
 figure img {
 	border: 1px solid #ddd;
-	border-radius: 2px;
+	border-radius: var(--border-radius);
 	padding: 2px;
 	width: calc(100% - 10px);
 }
@@ -121,8 +133,8 @@ code {
 	background-color: rgba(0, 0, 0, 0.05);
 	padding: 1em 1.5em;
 	border: 1px solid #ddd;
-	border-left: 3px solid #D3643B;
-	border-radius: 1px;
+	border-left: 3px solid var(--header-background);
+	border-radius: var(--border-radius);
 }
 
 /* responsive layout */
