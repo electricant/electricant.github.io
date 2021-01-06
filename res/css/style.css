@@ -7,10 +7,13 @@
 	--text-background: rgba(255, 255, 255, 0.9);
 	--font-size: 21px;
 	--font-size-small-screen: 20px;
+	--font-size-code: 18px;
+	--font-size-code-small-screen: 16px;
 	/* Box shadows for cards and stuff */
 	--box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.6);
 	/* control edge sharpness for various elements */
 	--border-radius: 1.5px;
+	--border-default: 1px solid #ddd;
 }
 @font-face {
     font-family: 'Alegreya';
@@ -121,7 +124,7 @@ figure {
 	margin-right: auto;
 }
 figure img {
-	border: 1px solid #ddd;
+	border: var(--border-default);
 	border-radius: var(--border-radius);
 	padding: 2px;
 	width: calc(100% - 10px);
@@ -132,11 +135,11 @@ figure img:hover {
 code {
 	display: block;
 	overflow: auto;
-	font-size: var(--font-size);
+	font-size: var(--font-size-code);
 	padding-left: 1.5em;
 	background-color: rgba(0, 0, 0, 0.05);
 	padding: 1em 1.5em;
-	border: 1px solid #ddd;
+	border: var(--border-default);
 	border-left: 3px solid var(--header-background);
 	border-radius: var(--border-radius);
 }
@@ -176,7 +179,7 @@ code {
 		word-wrap: break-word;
 	}
 	code {
-		font-size: var(--font-size-small-screen);
+		font-size: var(--font-size-code-small-screen);
 	}
 }
 @media (max-width: 500px) {
