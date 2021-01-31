@@ -144,6 +144,10 @@ code {
 	border-radius: var(--border-radius);
 }
 
+tt {
+	font-size: var(--font-size-code);
+}
+
 /* responsive layout */
 @media (max-width: 800px) {
 	.header {
@@ -179,6 +183,9 @@ code {
 		word-wrap: break-word;
 	}
 	code {
+		font-size: var(--font-size-code-small-screen);
+	}
+	tt {
 		font-size: var(--font-size-code-small-screen);
 	}
 }
