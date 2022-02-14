@@ -32,13 +32,13 @@
 ;;; Global configuration variables
 ;;;
 
-;;; Directory where the result is stored
-(defparameter *target-dir* "websites/")
+;;; Directory where the compile result is stored
+(defparameter *target-dir* "docs/")
 
-;;; Directory containing the pages to be compiled and their extension
+;;; Directory containing the pages sources to be compiled and their extension
 (defparameter *pages-dir* "content/pages/*.md")
 
-;;; Drectory containing the articles to be compiled and their extension
+;;; Drectory containing the articles sources to be compiled and their extension
 (defparameter *articles-dir* "content/articles/*.md")
 
 ;;; Character encoding to be used when reading and writing files
@@ -93,11 +93,11 @@
 ;;; targets
 (defun get-destinations ()
   (append (mapcar 
-  			#'(lambda (p) (concatenate 'string "website/"
+  			#'(lambda (p) (concatenate 'string *target-dir*
   									   (pathname-name p) ".html"))
   			(directory *pages-dir*))
   		  (mapcar
-  		  	#'(lambda (p) (concatenate 'string "website/articles/"
+  		  	#'(lambda (p) (concatenate 'string *target-dir* "articles/"
   		  							   (pathname-name p) ".html"))
   		  	(directory *articles-dir*))))
 

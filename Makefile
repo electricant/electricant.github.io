@@ -3,4 +3,4 @@ all:
 		--load make-website.lisp --eval '(make-website)'
 
 clean:
-	@rm website/*.html website/articles/*html
+	@rm docs/*.html docs/articles/*html
