@@ -16,25 +16,22 @@
 	--border-default: 1px solid #ddd;
 }
 @font-face {
-	font-family: 'Alegreya';
-	src: url('/res/fonts/Alegreya-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: fallback;
+    font-family: 'Alegreya';
+    src: url('/res/fonts/Alegreya-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
 	font-family: 'GrundschriftRegular';
 	src: url('/res/fonts/Grundschrift-Regular.otf') format('opentype');
 	font-weight: normal;
 	font-style: normal;
-	font-display: swap;
 }
 @font-face {
 	font-family: 'AlexBrushRegular';
 	src: url('/res/fonts/AlexBrush-Regular.otf') format('opentype');
 	font-weight: normal;
 	font-style: normal;
-	font-display: swap;
 }
 body {
 	background-color: rgb(var(--body-background));
