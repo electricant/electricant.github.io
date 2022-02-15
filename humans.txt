@@ -1,0 +1,9 @@
+/* TEAM */
+Author: The Electric Ant
+Contact: electricant@anche.no
+From: the World
+
+
+/* SITE */
+Last update: 2014-06-09
+Software: LaTex, htlatex, vim, make

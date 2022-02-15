@@ -1,0 +1,40 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+ZRAM_TOTAL_MB=1152
+
+# ccache settings
+export CCACHE_TEMPDIR="/tmp"
+export CCACHE_DIR="/var/cache/ccache"
+
+# HD settings
+hdparm -a1024 -S60 /dev/sda
+
+# enable zram
+size=$(($ZRAM_TOTAL_MB*1024*1024/4))
+
+modprobe zram num_devices=4
+echo $size > /sys/block/zram0/disksize
+echo $size > /sys/block/zram1/disksize
+echo $size > /sys/block/zram2/disksize
+echo $size > /sys/block/zram3/disksize
+
+mkswap /dev/zram0
+mkswap /dev/zram1
+mkswap /dev/zram2
+mkswap /dev/zram3
+
+swapon /dev/zram0 -p 10
+swapon /dev/zram1 -p 10
+swapon /dev/zram2 -p 10
+swapon /dev/zram3 -p 10
+
+exit 0

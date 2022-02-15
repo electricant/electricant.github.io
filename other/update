@@ -1,0 +1,32 @@
+#
+#!/bin/sh -e
+#
+# Updater script for debian systems
+# Put in '/usr/local/bin/' to run from everywhere (remember to chmod!)
+#
+# Author: Electric Ant (electricant@anche.no)
+#
+
+# check for root
+if [ "$(id -u)" != "0" ]; then
+	echo "You must be a root user" 2>&1
+	exit 1
+fi
+
+# update Debian
+apt-get update
+aptitude full-upgrade
+
+# Update hosts file
+echo "Updating hosts file..."
+wget http://winhelp2002.mvps.org/hosts.txt -O /tmp/hosts0
+wget http://www.malwaredomainlist.com/hostslist/hosts.txt -O /tmp/hosts1
+cat /etc/hosts.default >/etc/hosts
+tr -d '\r' </tmp/hosts0 >>/etc/hosts
+tr -d '\r' </tmp/hosts1 >>/etc/hosts
+echo "" >>/etc/hosts
+echo "DONE."
+
+# cleanup (tmp gets cleaned on reboot if ramdisk)
+apt-get autoremove
+aptitude autoclean

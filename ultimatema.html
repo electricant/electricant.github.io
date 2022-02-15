@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Ultimate Machine</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html --> 
+<meta name="src" content="ultimatema.tex"> 
+<meta name="date" content="2014-06-09 15:51:00"> 
+<link rel="stylesheet" type="text/css" href="index.css"> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+
+<h2 class="titleHead">Ultimate Machine</h2>
+<div class="author" ><span 
+class="cmr-12">The Electric Ant</span></div><br />
+<div class="date" ></div>
+   </div><a 
+href="index.html" >Home</a>
+<!--l. 25--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Contents</h3>
+   <div class="tableofcontents">
+   <span class="sectionToc" ><a 
+href="#x1-2000" id="QQ2-1-2">Introduction</a></span>
+<br />   <span class="sectionToc" ><a 
+href="#x1-3000" id="QQ2-1-3">Circuit</a></span>
+<br />   <span class="sectionToc" ><a 
+href="#x1-4000" id="QQ2-1-4">Firmware</a></span>
+<br />   <span class="sectionToc" ><a 
+href="#x1-5000" id="QQ2-1-5">Printed Circuit Board</a></span>
+<br />   <span class="sectionToc" ><a 
+href="#x1-6000" id="QQ2-1-6">Final Result</a></span>
+<br />   <span class="sectionToc" ><a 
+href="#x1-7000" id="QQ2-1-7">Variants</a></span>
+<br />   <span class="sectionToc" ><a 
+href="#x1-8000" id="QQ2-1-8">Further Information</a></span>
+   </div>
+   <h3 class="sectionHead"><a 
+ id="x1-2000"></a>Introduction</h3>
+<!--l. 31--><p class="noindent" >First of all you may be asking yourself what a ultimate machine is. Basically it is a
+box with nothing on it besides a switch on one of its faces. When you flip the switch
+a hand comes out from the box. The arm turns the switch off and goes back into the
+box. <br 
+class="newline" />As <span 
+class="cmti-10">Arthur C. Clarke </span>describes it: <br 
+class="newline" />&#8221;There is something unspeakably sinister about a machine that does nothing -
+absolutely nothing - except switch itself off.&#8221; <br 
+class="newline" />So a frend of mine and I, mesmerized by the power of this gadget decided to build
+one. There is plenty of instruction on the web (some of which is linked in the &#8216;Further
+information&#8217; section) but as you can imagine nothing we found applied to our
+use-case. Some designs required two motors, others two switches and a complex
+                                                                  
+
+                                                                  
+assemby. There were also some machines with a counter, some with light and also
+some whith sounds. <br 
+class="newline" />We got rid of all the bells and whistles of other designs and focused on functionality.
+As a result the mechanical components required by our circuit are only one servo and
+a switch. The electronic components total to 14 (including LED and battery). An
+added benefit of this circuit is that it draws no power (I really mean 0W!) when
+idling. <br 
+class="newline" />Finally the circuit is based around a PIC10F220. I have to aknlowledge that some
+people may not own such device, so a few alternatives are proposed. Howevever they
+are not yet tested (maybe in the future they will) so try them at your own risk.
+<br 
+class="newline" />If you happen to have any doubt/question/bug report <a 
+href="mailto:electricant@anche.no" >drop me a line</a>.
+   <h3 class="sectionHead"><a 
+ id="x1-3000"></a>Circuit</h3>
+<div class="center" 
+>
+<!--l. 50--><p class="noindent" >
+
+<!--l. 51--><p class="noindent" >
+<a href="pictures/schem.JPG">
+<img src="pictures/schem.JPG" alt="Schematic diagram" width=640></a>
+
+<br />
+Circuit schematic diagram</div>
+<!--l. 57--><p class="noindent" >The circuit accepts any voltage from 3 to 5.5 volts. Explaining how the circuit
+works is pretty straightforward. The microcontroller controls the servo and
+keeps the circuit powered on for the time needed for the servo to operate.
+<br 
+class="newline" />When the user filps the switch a positive voltage is fed through the diode D1 into the
+base of Q1. Thransistor Q1 is now saturated and the base of Q2 is pulled to ground.
+Q2 turns on and powers the circuit and the servo. Now the control is passed to the
+PIC itself. <br 
+class="newline" />Diodes D1 and D2 form an OR gate which is connected to the switch and to GP2.
+Through GP2 the microcontroller keeps a positive voltage on the base of Q1 even
+when the switch is turned off. This feature is needed to move the servo bakwards
+after the machine has shut the switch off and place the arm in its rest position again.
+<br 
+class="newline" />The various resistors are there to prevent the PIC from damage in case a transistor
+gets broken. <br 
+class="newline" />No part in this circuit is critical. D1 and D2 can be any diode you have handy (as
+long as it works). Q1 can be any general purpose, small signal NPN transistor. Q2
+any PNP transistor able to withstand at least 1A of continuous collector current.
+(NOTE: R1 is calculated assuming <span 
+class="cmmi-10">&beta;</span><sub><span 
+class="cmmi-7">Q</span><span 
+class="cmr-7">1</span></sub> <span 
+class="cmsy-10">&asymp; </span>100. If a different transistor is used the
+                                                                  
+
+                                                                  
+new value is calculated according to the formula: R1&#8217; = (<span 
+class="cmmi-10">V</span> <sub><span 
+class="cmmi-7">batt</span></sub> <span 
+class="cmsy-10">&sdot; </span><span 
+class="cmmi-10">&beta;</span>) / (<span 
+class="cmmi-10">I</span><sub><span 
+class="cmmi-7">max</span></sub>); where
+<span 
+class="cmmi-10">V</span> <sub><span 
+class="cmmi-7">batt</span></sub> = 4<span 
+class="cmmi-10">.</span>5<span 
+class="cmmi-10">V </span>, <span 
+class="cmmi-10">I</span><sub><span 
+class="cmmi-7">max</span></sub> = 1<span 
+class="cmmi-10">.</span>5<span 
+class="cmmi-10">A</span>).
+   <h3 class="sectionHead"><a 
+ id="x1-4000"></a>Firmware</h3>
+<!--l. 70--><p class="noindent" >The firmware and the instructions to build it are available on my GitHub profile
+(<a 
+href="https://github.com/electricant/ultimate_machine" >quick link</a>). <br 
+class="newline" />I won&#8217;t dig into the code in detail (otherwhise why are there comments?). I&#8217;d rather
+explain which design choiches where made and why. <br 
+class="newline" />After calibrating and initializing itself the PIC goes through an infinite loop. Its
+purpose is to generate reliable pulses for the servo. To keep track of the
+elapsed time TMR0 is used. Instead of busy-waiting for the timer to reach the
+appropriate value, the state of the switch is checked and the pulse-width is varied
+accordingly. Moreover if the switch is OFF the pulses are counted in order to
+provide some delay prior to switching off the circuit and servo. To program
+the board jus remove any conection from the reset jumper and close the
+program jumper insteda. Then connect the board to a PicKIT2/3 or anything
+else able to program the pic. Then fire your favuorite programmig tool.
+<br 
+class="newline" />(NOTE: the firmware is not completed. I&#8217;ll keep updating this page if needed).
+<!--l. 83--><p class="noindent" >
+   <h3 class="sectionHead"><a 
+ id="x1-5000"></a>Printed Circuit Board</h3>
+<!--l. 84--><p class="noindent" >Only a few units are planned to be built an the circuit is pretty simple. So no PCB is
+provided. Maybe we&#8217;ll add it in the future if required. <br 
+class="newline" />A piece of eurocard was used instead. There are two wiring diagrams:
+<div class="center" 
+>
+<!--l. 86--><p class="noindent" >
+
+<!--l. 87--><p class="noindent" >
+<a href="pictures/rev3_pcb.JPG">
+<img src="pictures/rev3_pcb.JPG" alt="REV3 PCB" width=640></a>
+
+<br />
+PCB with no SMD parts
+<!--l. 93--><p class="noindent" >
+<a href="pictures/rev3_pcbSMT.JPG">
+<img src="pictures/rev3_pcbSMT.JPG" alt="REV3 PCB SMT" width=640></a>
+
+<br />
+PCB with SMD parts</div>
+                                                                  
+
+                                                                  
+<!--l. 102--><p class="noindent" >
+   <h3 class="sectionHead"><a 
+ id="x1-6000"></a>Final Result</h3>
+<!--l. 103--><p class="noindent" >The first attempt worked for a while and I was as happy as a pig in clover. But
+happiness did not last long and a few switch-throws after the video below it stopped
+working. The circuit in fact remained always powered up. Suspecting something was
+wired the wrong way a new board was designed from the ground up, just
+to discover that the transistor arrangement was flawed. That is why the
+wiring diagram shows &#8221;REV 3.0&#8221; and the schematic is labeled &#8221;REV 2.0&#8221;.
+<br 
+class="newline" />To date, only the circuit has been realized. Keep an eye on this website for
+updates.
+<div class="center" 
+>
+<!--l. 108--><p class="noindent" >
+
+<!--l. 109--><p class="noindent" >
+<a href="pictures/rev1.JPG">
+<img src="pictures/rev1.JPG" alt="REV1 image" width=640></a>
+
+<br />
+Picture of REV 1.0 with no PIC mounted
+<!--l. 115--><p class="noindent" >
+<a href="pictures/rev3_front.JPG">
+<img src="pictures/rev3_front.JPG" alt="REV3_front image" width=640></a>
+
+<br />
+REV 3.0 - Front view
+<!--l. 121--><p class="noindent" >
+<a href="pictures/rev3_back.JPG">
+<img src="pictures/rev3_back.JPG" alt="REV3_back image" width=640></a>
+
+<br />
+REV 3.0 - Back view. A mix of SMT and surface mount was used.
+<!--l. 127--><p class="noindent" >
+      <video width="640" height="360" controls>
+            <source src="video/ultimatema.ogg" type="video/ogg">
+            Your browser does not support HTML5 video.
+      </video>
+
+<br />
+Video of REV 1.0 in action. <a 
+href="video/ultimatema.ogg" >Download</a>.</div>
+<!--l. 138--><p class="noindent" >
+   <h3 class="sectionHead"><a 
+ id="x1-7000"></a>Variants</h3>
+                                                                  
+
+                                                                  
+<!--l. 139--><p class="noindent" >This circuit can also accept two switches one for the user and one that works as a
+limit switch. Just remove the reset jumper and replace it with a switch connected as
+follows: <br 
+class="newline" />TODO: picture <br 
+class="newline" />As far as the firmware is concerned a patch will be published once the main project is
+complete. <br 
+class="newline" />You can also get rid of the PIC completely but another kind of circuit is needed and
+the limit switch becomes mandatory. You&#8217;ll also need to modify the servo by
+removing its control circuitry and hook the motor to terminals A and B of the cicuit.
+Here is the schematic: <br 
+class="newline" />TODO: insert those damn pictures soon! It is basically an H-Bridge operated by
+the switches. (If you don&#8217;t know what an H-bridge is then google is your
+friend).
+   <h3 class="sectionHead"><a 
+ id="x1-8000"></a>Further Information</h3>
+     <ul class="itemize1">
+     <li class="itemize"><a 
+href="http://en.wikipedia.org/wiki/Claude_Shannon#Hobbies_and_inventions" class="url" ><span 
+class="cmtt-10">http://en.wikipedia.org/wiki/Claude_Shannon#Hobbies_and_inventions</span></a>
+     </li>
+     <li class="itemize"><a 
+href="http://www.youtube.com/watch?v=Z86V_ICUCD4" class="url" ><span 
+class="cmtt-10">http://www.youtube.com/watch?v=Z86V_ICUCD4</span></a></li></ul>
+<!--l. 155--><p class="noindent" ><a 
+href="index.html" >Home</a>
+<!--l. 157--><p class="noindent" >Last edit: <span 
+class="cmti-10">2014-06-09 </span> 
+</body></html> 
+
+                                                                  
+
+

@@ -1,0 +1,252 @@
+%
+% Author: electricant <electricant@anche.no>
+% Licensed under the GNU GPL v3
+%
+\documentclass{article}
+
+% for hyperlinks
+\usepackage{hyperref}
+% for the correct date
+\usepackage[iso]{datetime}
+% for images
+\usepackage{graphicx}
+% for removing prefix form figure captions
+\usepackage[labelformat=empty]{caption}
+% set some margins (PDF only)
+\usepackage[margin=2cm]{geometry}
+% to easily separate things
+\def\wl{\par \noindent \vspace{\lineskip}}
+% disables chapter, section and subsection numbering
+\setcounter{secnumdepth}{-1} 
+
+\title{The Electric Ant}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle
+\quote{``Poetry is the spontaneous overflow of powerful feelings: it takes its origin from emotion recollected in tranquility.'' (\emph{William Wordsworth}, preface to Lyrical Ballads)}
+\\*\\*
+Despite the quotation, I do not think of myself as a poet, neither do I aim at becoming one.
+This website is simply a cluttered recollection of anything interesting and maybe worthwile.
+\\*And of course it's done in tranqullity and with deep thougt. That's why Wordsworth's definition of poetry seemed appropriate.
+\\*This webside is mainly intended as a personal reference. Anyway I'll try to briefly comment each article linked here. Doing so will help me remember why each entry is listed here and (I hope) help you decide what to read and what to skip.
+\\*Keep in mind that you may find something in italian (I's my mother tongue).
+\\*Finally I kindly ask you to donate to \url{http://www.autistici.org} they are hosting this website and fight for the open web!
+\\*By the way, if you have anything you'd like to tell me feel free to write to \href{mailto:electricant@anche.no}{electricant@anche.no}
+\\*That's all. Enjoy!
+
+\tableofcontents
+%
+% "Things I Fiddle With" section 
+%
+\section{Things I Fiddle With}
+My interests are mainly electronics, programming and technology in general. 
+\\*So here's a list of projects whith their links:
+\begin{itemize}
+      \item Practically everything related to programming is here:
+                  \href{http://github.com/electricant}{GitHub}
+      \item \href{ultimatema.html}{Ultimate Machine}
+      \item A humble Operating System (dubbed \href{OS.html}{ElectrOS})
+      \item This website! It's written entirely using \LaTeX{} and rendered to HTML using \texttt{htlatex}.
+      (Actually some Makefile magic is involved too but it's just tweaks).
+      You can get the sources with \texttt{`wget --mirror --no-parent --reject="*.html*" www.autistici.org/electricant/'}
+      \item GNU/Linux:
+      \begin{itemize}
+            \item \href{other/rc.local}{Here} is my \texttt{/etc/rc.local} script.
+            \item Useful update script for Debian-based OSs \href{other/update}{update}
+      \end{itemize}
+\end{itemize}
+%
+% "Websites" section 
+%
+\section{Websites}
+\begin{itemize}
+	\item \url{http://ludens.cl/}
+	\\*This man does not really know what evolution is (see his introduction). Luckily his website is about electronics. 
+     \item {[}ITA{]}\url{http://www.cheap-hack.com/home/}
+     \\*Electronics and hacking in general
+     \item \url{http://www.awarenetwork.org/}
+     \\*``A crowd of borderline personality computer enthusiasts with our own webspace''
+     \item \url{http://www.sentex.ca/~mec1995/circ/circuits.htm}
+     \\*Endless list of electronic circuits with schematics 
+     \item \url{http://graphics.stanford.edu/~seander/bithacks.html}
+     \\*List of code snippets for clever bit operations 
+     \item \url{http://semver.org/}
+     \\*How to avoid headaches with software versioning 
+     \item \url{http://osgameclones.com/}
+     \\*If you have processing power to waste here it is a wonderful list of ``open-source reimplementations of great old games''
+     \item \url{http://seriss.com/people/erco/unixtools/hostnames.html}
+     \\*A source of inspiration for computer hostnames
+     \item \url{http://ccodearchive.net/}
+     \\*Archive of snippets of C code. Really useful.
+\end{itemize}
+%
+% "Articles" section 
+%
+\section{Articles}
+
+\subsection{General}
+\begin{itemize}
+	\item \href{http://blog.tutorspree.com/post/54349646327/death-of-organic-search}{How Google is Killing Organic Search}
+	\item \url{http://wellpreparedmind.wordpress.com/2013/07/01/never-ever-trust-facebook/}
+	\\*One good reason for not having a Facebook account (or any other silly social network) 
+	\item \href{http://www.schneier.com/essay-418.html}{The Internet Is a Surveillance State}
+	and also \href{http://queue.acm.org/detail.cfm?id=2390758}{The Web Won't Be Safe or Secure until We Break It}
+	\item \href{http://www.ee.ryerson.ca/~elf/abacus/feynman.html}{Feynman vs. The Abacus} an excerpt from a book about \href{http://en.wikipedia.org/wiki/Richard_Feynman}{R. Feynman}
+      \item \href{http://www.motherjones.com/politics/2013/08/mesh-internet-privacy-nsa-isp}{Mesh networks} are a way to build a local parallel internet. Groups of people in Greece and other countries around the world are using them to build their own web.
+      \item \href{http://www.telegraph.co.uk/health/dietandfitness/10634081/John-Yudkin-the-man-who-tried-to-warn-us-about-sugar.html}{John Yudkin: the man who tried to warn us about sugar}
+      \item \href{http://www.theatlantic.com/magazine/archive/2014/01/the-eavesdropper/355727/}{Saving The Lost Art of Conversation}
+      \item \href{https://we.riseup.net/riseuplabs+paow/openpgp-best-practices}{OpenPGP Best Practices}
+      \item \href{http://www.trueactivist.com/the-man-who-lives-without-money/}{The Man Who Lives Without Money}
+      \\*I don't completely agree whith this guy, but actually he highlites some critical points about our society.
+      \item \href{http://jliszka.github.io/2013/10/01/how-traffic-actually-works.html}{How Traffic Actually Works}
+      \item \href{http://www.gwern.net/Nicotine}{Nicotine} may be a useful stimulant.
+      \item \href{http://aeon.co/magazine/being-human/children-today-are-suffering-a-severe-deficit-of-play/}{The Play Deficit}
+      \\*Children are suffering a severe deficit of play.
+      \item \href{http://rachelbythebay.com/w/2013/06/15/campus/}{Acquisition and maintenance of a band of minions}
+      \item \href{http://www.samharris.org/blog/item/drugs-and-the-meaning-of-life}{Drugs and the Meaning of Life}
+\end{itemize}
+\subsection{Science and Programming}
+\begin{itemize}
+      \item Links about programming PIC microcontrollers using Linux:
+      \begin{itemize}
+            \item \url{http://www.micahcarrick.com/pic-programming-linux.html}
+      \end{itemize}
+      \item \url{http://dmitry.gr/index.php?r=05.Projects&proj=07.%20Linux%20on%208bit}
+      \\*Linux on an 8-bit microcontroller
+      \item Using bayesian statistics (and rough assumptions) to calculate \href{http://bayesianbiologist.com/2013/06/06/how-likely-is-the-nsa-prism-program-to-catch-a-terrorist/}{How likely is the NSA PRISM program to catch a terrorist}
+      \item A \href{http://raidersec.blogspot.it/2013/03/introducing-dumpmon-twitter-bot-that.html}{twitter bot} which monitors paste websites in search for sensitive content. 
+      \item \href{http://blogs.msdn.com/b/abhinaba/archive/2009/01/25/back-to-basic-series-on-dynamic-memory-management.aspx}{Series on dynamic memory management}
+      \\*All you need to know to implement your own garbage collector.
+	
+	\item \url{http://derkarl.org/why_to_tabs.html}
+      \\*How to properly indent source code 
+      \item \href{http://justinjackson.ca/words.html}{This is a Webpage}
+      \\*When writing a web page focus on the content not on the bells and whistles. 
+      \item \href{http://andrewkelley.me/post/jamulator.html}{Statically Recompiling NES Games into Native Executables with LLVM and Go}.
+      \item \href{http://www.catb.org/esr/structure-packing/}{The Lost Art of C Structure Packing}
+      \item \href{http://www.drdobbs.com/lock-free-data-structures/184401865}{Lock-Free Data Structures}
+      \item \href{http://en.wikipedia.org/wiki/German_tank_problem}{German Tank Problem}
+      \\*The problem of estimating the maximum of a discrete uniform distribution from sampling without replacement.
+
+\end{itemize}
+%
+% "Books and Knowledge" section 
+%
+\section{Books and Knowledge}
+
+\subsection{General}
+\begin{itemize}
+      \item \underline{The Collected Stories of \emph{Philip K. Dick}}
+      \\*The best science-fiction writer ever. This webpage is named after one of his stories.
+      
+	\item \underline{\emph{George Orwell}, 1984}
+      \\*The most known dystopian novel. The book is well written and has great plot.
+      \\*Related: \href{http://qz.com/95696/you-probably-didnt-read-the-most-telling-part-of-orwells-1984-the-appendix/}{About 1984 - the appendix}
+      
+	\item \underline{\emph{A. Huxley}, Brave New World} and \underline{Brave New World Revisited}
+      \\*The first is another dystopian novel. Far superior than 1984 as regards the depicted society. The second one is the author's reflections about the book after 30 years. 
+      
+	\item \underline{\emph{W. Gibson}, Neuromancer}
+      \\*It is considered a masterpiece. In this book William Gibson introduced the world to cyberspace.
+      
+	\item \underline{\emph{William Blake}, The Marriage of Heaven and Hell}
+      
+	\item \underline{\emph{Alan Moore, David Lloyd}, V for Vendetta}
+      \\*Not a book actually but I had no other section to put this.
+      
+	\item \underline{\emph{Alan Moore, David Gibbons}, Watchmen}.
+	\\*Same as above.
+      
+	\item {[}PDF{]} \underline{\emph{Isaac Asimov}, \href{other/Asimov-Feeling.pdf}{The Feeling of Power}}
+      
+	\item {[}PDF{[} \underline{\emph{Bertrand Russell}, \href{other/Russell-Idleness.pdf}{In Praise of Idleness}}
+\end{itemize}
+
+\subsection{Science and Programming}
+\begin{itemize}
+      \item \url{https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md}
+      \\*List of free programming books
+      \item \href{http://aosabook.org/en/index.html}{The Architecture of Open Source Applications}
+       \item \url{http://physicsdatabase.com/book-list-by-title/}
+       \\*List of free science books.
+       \item \url{http://mitopencourseware.wordpress.com/ocw-bookshelf/}
+       \\*MIT OpenCourseWare bookshelf
+      \item Mathematics for programmers
+      \begin{itemize}
+            \item \href{http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/}{Bayesian Methods for Hackers}
+            \item \href{http://www.essentialmath.com/tutorial.htm}{Essential Math for Games Programmers}
+      \end{itemize}
+      \item Some links to machine learning e-books I ought to read:
+      \begin{itemize}
+            \item \url{http://www-nlp.stanford.edu/IR-book/}
+            \item \url{http://www-stat.stanford.edu/~tibs/ElemStatLearn/}
+            \item \url{http://cs229.stanford.edu/materials.html}
+            \item \url{http://ciml.info/}
+      \end{itemize}
+      \item Coursera:
+      \begin{itemize}
+            \item \href{https://www.coursera.org/course/recsys}{Introduction to Recommender Systems}
+            \item \href{https://www.coursera.org/course/mathphil}{Introduction to Mathematical Philosophy}
+      \end{itemize}
+      \item \href{http://www.cs.uiuc.edu/~jeffe/teaching/algorithms/}{Algorithms Course Materials}
+\end{itemize}
+%
+% "Quotes" section 
+%
+\section{Quotes}
+\begin{itemize}
+	\item ``If the doors of perception were cleansed every thing would
+	appear to man as it is, Infinite. For man has closed himself up, till
+	he sees all things thro' narrow chinks of his cavern.''
+	\\*(\emph{William Blake}, The Marriage of Heaven and Hell)
+	
+	\item ``Prisons are built whith stones of Law, Brothels whith bricks of
+	Religion. [\ldots] As the caterpillar chooses the fairest leaves to lay
+	her eggs on, so the priest lays his curse on the fairest joys.''
+	\\*(\emph{William Blake}, The Marriage of Heaven and Hell)
+	
+	\item ``Leith dreamily surveyed the long ash of his cigar and turned to 
+	me. "Do you know, Anak, you can't appreciate the joy of being the
+	buffoon, playing the clown. You couldn't do it if you wished.
+	Your pitiful little conventions and smug assumptions of decency would
+	prevent. But simply to turn loose your soul to every whimsicality,
+	to play the fool unafraid of any possible result, why, that requires a
+	man other than a householder and law-respecting citizen.''
+	\\*(\emph{Jack London}, Moon Face: Local Color)
+	
+	\item ``LSD was an incredible experience. Not that I’m recommending it
+	for anybody else; but for me it kind of – it hammeced home to me that
+	reality was not a fixed thing. That the reality that we saw about us
+	every day was one reality, and a valid one – but that there were 
+	others, different perspectives where different things have meaning that
+	were just as valid. That had a profound effect on me.''
+	\\*(\emph{Alan Moore})
+	
+	\item ``Wouldn't you like to see a positive LSD story on the news?
+	To base your decision on information rather than scare tactics and
+	superstition? Perhaps? Wouldn't that be interesting? Just for once?
+	\\*Today, a young man on acid realized that all matter is merely energy
+	condensed to a slow vibration – that we are all one consciousness
+	experiencing itself subjectively. There's no such thing as death, life
+	is only a dream, and we're the imagination of ourselves.
+	\\*Here's Tom with the weather.''
+	\\*(\emph{Bill Hicks}, Sane Man -1989-, \href{http://www.youtube.com/watch?v=7D0BeLz5blM}{video})
+\end{itemize}
+%
+% Footer
+%
+\centerline{
+\begin{figure}[h]
+	\href{http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US}
+      	{\includegraphics[width=\linewidth]{other/cc_license.png}}
+	\\*Unless otherwise noted, content on this site is licensed under:
+	\href{http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US}
+		{Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License}
+      \end{figure}
+}
+Last edit: \emph{\today}
+
+\end{document}
+
