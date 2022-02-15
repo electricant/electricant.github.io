@@ -1,12 +1,19 @@
 # Articles by Date
-
-1. [2021](#2021)
+1. [2022](#2022)
+	1. [February](#2022february)
+2. [2021](#2021)
 	1. [September](#2021september)
 	2. [January](#2021january)
-2. [2020](#2020)
+3. [2020](#2020)
 	1. [August](#2020august)
 	2. [April](#2020april)
-3. [Older](#older)
+4. [Older](#older)
+
+## 2022 <a name="2022"></a>
+
+### February <a name="2022february"></a>
+
+* [Upgrading PostgreSQL Clusters](articles/postgresql_upgrade_cluster.html)
 
 ## 2021 <a name="2021"></a>
 

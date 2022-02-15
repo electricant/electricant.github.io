@@ -13,7 +13,7 @@
 <link rel=\"icon\" type=\"image/png\" sizes=\"64x64\" href=\"/res/img/favicon64.png\">
 <link rel=\"shortcut-icon\" type=\"image/png\" href=\"/res/img/favicon64.png\">
 
-<link rel=\"stylesheet\" href=\"/res/css/style.css\">
+<link rel=\"stylesheet\" href=\"../res/css/style.css\">
 <link rel=\"styleshet\" href=\"/res/css/foundation-icons.css\">
 
 <title>Paolo Scaramuzza" (if extratitle (concatenate 'string " | " extratitle))
