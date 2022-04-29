@@ -1,15 +1,16 @@
 # Random Stuff
 
-This page contains some links to interesting things I found while surfing the
+This page collects some links to interesting things I found while surfing the
 net. The order is random, the goal is to put the most recent things first and
 group stuff by topic but don't take it for granted. I try to add a small comment
 after each link in order to provide some context about it.
 
 Table of contents:
 1. [Articles](#articles)
-	1. [Work related](#work-related)
-	2. [Car and traffic related](#car-and-traffic)
-	3. [Relationships](#relationships)
+	1. [Society](#society)
+	2. [Work related](#work-related)
+	3. [Car and traffic related](#car-and-traffic)
+	4. [Relationships](#relationships)
 2. [Guides, Lectures and Books](#guides-lectures-books)
 	1. [Programming](#programming)
 3. [Short Stories and Essays](#short-stories-and-essays)
@@ -22,19 +23,6 @@ Table of contents:
 * [Secrets about People: A Short and Dangerous Introduction to René Girard](https://alexdanco.com/2019/04/28/secrets-about-people-a-short-and-dangerous-introduction-to-rene-girard/)
 	<br/>The title speaks for itself: this is an introduction to Girard's
 	thinking with a critique of social media as a bonus.
-
-* [Littlewood’s Law and the Global Media](https://www.gwern.net/Littlewood)
-	<br/>Littlewood's law states that *"In the course of any normal person’s
-	life, miracles happen at a rate of roughly one per month"*. This means
-	that most of the time sensational news reported in the media is not
-	representative of an actual trend.
-
-* [Ours is the Waste Age: that’s the key to transforming the future](https://aeon.co/essays/ours-is-the-waste-age-thats-the-key-to-tranforming-the-future)
-
-* [Three Theories for Why You Have No Time](https://www.theatlantic.com/ideas/archive/2019/12/why-you-never-have-time/603937/)
-	<br/>*"Better technology means higher expectations, and higher
-	expectations create more work."* To leave a meaningful life one has to
-	keep an eye on his/her expectations.
 
 * [Albert Camus built a philosophy of humanity on a foundation of absurdity](https://aeon.co/videos/albert-camus-built-a-philosophy-of-humanity-on-a-foundation-of-absurdity)
 	<br/>Video compendium on Camus' philosophy.
@@ -49,12 +37,6 @@ Table of contents:
 	<br/>Wonderful collection of drawings by William Blake for The Gates of
 	Paradise.
 
-* [Angels in the Market](https://aeon.co/essays/from-home-to-market-a-history-of-white-womens-power-in-the-us)
-	<br/>The heart-tug tactics of 1950s ads steered white American women away
-	from activism into domesticity. They’re still there.
-
-* [In a pandemic we learn again what Sartre meant by being free](https://psyche.co/ideas/in-a-pandemic-we-learn-again-what-sartre-meant-by-being-free)
-
 * [Laughter is vital](https://aeon.co/essays/for-henri-bergson-laughter-is-what-keeps-us-elastic-and-free)
 	<br/>What laughter meant for the philosopher Henry Bergson.
 
@@ -65,14 +47,6 @@ Table of contents:
 * [Why Foucault’s work on power is more important than ever](https://aeon.co/essays/why-foucaults-work-on-power-is-more-important-than-ever)
 
 * [What did Max Weber mean by the ‘spirit’ of capitalism?](https://aeon.co/ideas/what-did-max-weber-mean-by-the-spirit-of-capitalism)
-
-* [Finances, Technology, Repair, and "Enough"](https://syonyk.blogspot.com/2020/02/finances-technology-repair-and-enough.html)
-
-* [How do people learn to cook a poisonous plant safely?](https://www.bbc.co.uk/news/business-48859333)<br/>
-	Intresting comparison between the development of culture and the
-	scientific method. However I do not fully agree with the article since
-	science, the same way as our culture, develops by emulation and
-	improvement on previous results by other people.
 
 * [The Transistor, Part 1: Groping in the Dark](https://technicshistory.wordpress.com/2018/01/20/the-transistor-part-1-groping-in-the-dark/)
 	<br/>Three-part history on the transistor. Very well written and
@@ -87,68 +61,17 @@ Table of contents:
 
 * [Boredom is not a problem to be solved. It's the last privilege of a free mind](https://www.theguardian.com/commentisfree/2015/sep/28/boredom-cures-privilege-free-mind)
 
-* [The demoralized mind](https://newint.org/columns/essays/2016/04/01/psycho-spiritual-crisis/)<br/>
-	Essay about how our consumerism culture relates to depression and
-	demoralization.
-
-* [Like start-ups, most intentional communities fail – why? | Aeon Essays](https://aeon.co/essays/like-start-ups-most-intentional-communities-fail-why)
-	<br>A great essay highlighting difficulties most intentional communities
-	fail. All in all *"communities are just fractals of society"*.
-
-* [Better Than Free](http://kk.org/thetechnium/better-than-fre) <br>
-	Article by Kevin Kelly. It points out how the internet is a copy machine
-	that has made many things worthless and for what the people is still
-	willing to pay.
-
 * [How totalism works](https://aeon.co/essays/how-cult-leaders-brainwash-followers-for-total-control) <br>
 	*"The brainwashing methods of isolation, engulfment and fear can lead
 	anyone to a cult."*
-
-* [Neoliberalism has conned us into fighting climate change as individuals](https://www.theguardian.com/environment/true-north/2017/jul/17/neoliberalism-has-conned-us-into-fighting-climate-change-as-individuals)
-	<br> *"This is the con-job of neoliberalism: to persuade us to address
-	climate change through our pocket-books, rather than through power and
-	politics."*
-	<br> Also on the same line: [Conscious consumerism is a lie.  Here’s a better way to help save the world](https://qz.com/920561/conscious-consumerism-is-a-lie-heres-a-better-way-to-help-save-the-world/)
 
 * [Law in the Jungle](https://aeon.co/essays/the-subalterns-are-speaking-whos-listening) <br>
 	 Essay on the Jungle refugee camp in Calais. The article deals with how it
 	 became its own society and what this meant.
 
-* [Teaching ‘grit’ is bad for children, and bad for democracy](https://aeon.co/ideas/teaching-grit-is-bad-for-children-and-bad-for-democracy) <br>
-	Apparently grit does more harm than good. The author explains *"how a grit
-	culture contributes to an authoritarian politics, one where leaders expect
-	the masses to stay on task."*
-
-* [Return of the city-state](https://aeon.co/essays/the-end-of-a-world-of-nation-states-may-be-upon-us) <br>
-	*"This is the crux of the problem: nation-states rely on control. If they
-	can’t control information, crime, businesses, borders or the money supply,
-	then they will cease to deliver what citizens demand of them. In the end,
-	nation-states are nothing but agreed-upon myths: we give up certain
-	freedoms in order to secure others."*
-
-* [Universal Basic Income is a neoliberal plot to make you poorer](https://www.opendemocracy.net/neweconomics/universal-basic-income-is-a-neoliberal-plot-to-make-you-poorer/) <br>
-	*"A closer look at how UBI is expected to work reveals that it is intended
-	to provide political cover for the elimination of social programs and the
-	privatization of social services"*
-
 * [How to Get Rich](https://www.edge.org/conversation/how-to-get-rich)
 	<br/>The title is kind of a clickbait. This is a talk by Jared Diamond,
 	author of *Guns, Germs, and Steel*. It is a summary of his book.
-
-* [Fitter, Happier, More Productive… and other fantasies of millennial life](https://slightlymarxistfounder.com/2018/03/10/fitter-happier-more-productive/)
-	<br/>*"Radiohead’s OK Computer is turning 21 this year (2018). The album
-	has enjoyed a renaissance of late, finding more relevance in a tech
-	addicted society."*
-
-* [Radical Critique of Wellness Culture](https://newrepublic.com/article/148296/barbara-ehrenreich-radical-crtique-wellness-culture)
-	<br/>Essay about the fear of death typical of contemporary society.
-
-* [Die Like a Dog](https://aeon.co/essays/why-do-we-give-dogs-a-better-death-than-we-give-ourselves)
-	<br/>Pet dogs often have a peaceful death that forestalls protracted
-	suffering and pain. Why can’t we do the same for humans? (see also the
-	article above)
-
-* [Orwell knew: we willingly buy the screens that are used against us](https://aeon.co/ideas/orwell-knew-we-willingly-buy-the-screens-that-are-used-against-us)
 
 * [Caves all the way down](https://aeon.co/essays/is-psychedelics-research-closer-to-theology-than-to-science)
 	<br/>Different cultures approach and experience psychedelics in different
@@ -173,6 +96,93 @@ Table of contents:
 * [How Information Got Re-Invented](http://nautil.us/issue/51/limits/how-information-got-re_invented)
 	<br/>The story behind Shannon's theory of information
 
+* [ZEVS, The russian 82 Hz ELF transmitter](http://www.vlf.it/zevs/zevs.htm)
+
+* [The Real Cuban Missile Crisis](https://www.theatlantic.com/magazine/archive/2013/01/the-real-cuban-missile-crisis/309190/?single_page=true)
+
+* [Aldous Huxley: The Ultimate Revolution](https://pulsemedia.org/2009/02/02/aldous-huxley-the-ultimate-revolution/)
+
+### Society <a name="society"></a>
+
+* [The idea of primitive communism is as seductive as it is wrong](https://aeon.co/essays/the-idea-of-primitive-communism-is-as-seductive-as-it-is-wrong)
+	<br/>It's important to challenge our own assumptions from time to time.
+	This article does just that by demistifying the idea that societies were
+	naturally egalitarian and communal before farming.
+
+* [Littlewood’s Law and the Global Media](https://www.gwern.net/Littlewood)
+	<br/>Littlewood's law states that *"In the course of any normal person’s
+	life, miracles happen at a rate of roughly one per month"*. This means
+	that most of the time sensational news reported in the media is not
+	representative of an actual trend.
+
+* [Ours is the Waste Age: that’s the key to transforming the future](https://aeon.co/essays/ours-is-the-waste-age-thats-the-key-to-tranforming-the-future)
+
+* [Three Theories for Why You Have No Time](https://www.theatlantic.com/ideas/archive/2019/12/why-you-never-have-time/603937/)
+	<br/>*"Better technology means higher expectations, and higher
+	expectations create more work."* To leave a meaningful life one has to
+	keep an eye on his/her expectations.
+
+* [Angels in the Market](https://aeon.co/essays/from-home-to-market-a-history-of-white-womens-power-in-the-us)
+	<br/>The heart-tug tactics of 1950s ads steered white American women away
+	from activism into domesticity. They’re still there.
+
+* [In a pandemic we learn again what Sartre meant by being free](https://psyche.co/ideas/in-a-pandemic-we-learn-again-what-sartre-meant-by-being-free)
+
+* [Finances, Technology, Repair, and "Enough"](https://syonyk.blogspot.com/2020/02/finances-technology-repair-and-enough.html)
+
+* [How do people learn to cook a poisonous plant safely?](https://www.bbc.co.uk/news/business-48859333)<br/>
+	Intresting comparison between the development of culture and the
+	scientific method. However I do not fully agree with the article since
+	science, the same way as our culture, develops by emulation and
+	improvement on previous results by other people.
+
+* [The demoralized mind](https://newint.org/columns/essays/2016/04/01/psycho-spiritual-crisis/)<br/>
+	Essay about how our consumerism culture relates to depression and
+	demoralization.
+
+* [Like start-ups, most intentional communities fail – why? | Aeon Essays](https://aeon.co/essays/like-start-ups-most-intentional-communities-fail-why)
+	<br/>A great essay highlighting difficulties most intentional communities
+	fail. All in all *"communities are just fractals of society"*.
+
+* [Better Than Free](http://kk.org/thetechnium/better-than-fre) <br/>
+	Article by Kevin Kelly. It points out how the internet is a copy machine
+	that has made many things worthless and for what the people is still
+	willing to pay.
+
+* [Neoliberalism has conned us into fighting climate change as individuals](https://www.theguardian.com/environment/true-north/2017/jul/17/neoliberalism-has-conned-us-into-fighting-climate-change-as-individuals)
+	<br/> *"This is the con-job of neoliberalism: to persuade us to address
+	climate change through our pocket-books, rather than through power and
+	politics."*
+	<br> Also on the same line: [Conscious consumerism is a lie.  Here’s a better way to help save the world](https://qz.com/920561/conscious-consumerism-is-a-lie-heres-a-better-way-to-help-save-the-world/)
+	
+* [Return of the city-state](https://aeon.co/essays/the-end-of-a-world-of-nation-states-may-be-upon-us) <br/>
+	*"This is the crux of the problem: nation-states rely on control. If they
+	can’t control information, crime, businesses, borders or the money supply,
+	then they will cease to deliver what citizens demand of them. In the end,
+	nation-states are nothing but agreed-upon myths: we give up certain
+	freedoms in order to secure others."*
+
+* [Universal Basic Income is a neoliberal plot to make you poorer](https://www.opendemocracy.net/neweconomics/universal-basic-income-is-a-neoliberal-plot-to-make-you-poorer/) <br/>
+	*"A closer look at how UBI is expected to work reveals that it is intended
+	to provide political cover for the elimination of social programs and the
+	privatization of social services"*
+
+
+* [Fitter, Happier, More Productive… and other fantasies of millennial life](https://slightlymarxistfounder.com/2018/03/10/fitter-happier-more-productive/)
+	<br/>*"Radiohead’s OK Computer is turning 21 this year (2018). The album
+	has enjoyed a renaissance of late, finding more relevance in a tech
+	addicted society."*
+
+* [Radical Critique of Wellness Culture](https://newrepublic.com/article/148296/barbara-ehrenreich-radical-crtique-wellness-culture)
+	<br/>Essay about the fear of death typical of contemporary society.
+
+* [Die Like a Dog](https://aeon.co/essays/why-do-we-give-dogs-a-better-death-than-we-give-ourselves)
+	<br/>Pet dogs often have a peaceful death that forestalls protracted
+	suffering and pain. Why can’t we do the same for humans? (see also the
+	article above)
+
+* [Orwell knew: we willingly buy the screens that are used against us](https://aeon.co/ideas/orwell-knew-we-willingly-buy-the-screens-that-are-used-against-us)
+
 * [Paradise Lost?—The iron cage of consumerism](https://timjackson.org.uk/consumerism-theodicy/)
 	<br/>*"Far from creating a credible eschatology, consumerism appears to be
 	a continuous exercise in denial of our own mortality and of the widespread
@@ -181,12 +191,6 @@ Table of contents:
 	the building of meaning structures, communities of meaning, that lie
 	outside the realm of the market; and that offer credible answers to the
 	deep foundational questions that continue to haunt us."*
-
-* [ZEVS, The russian 82 Hz ELF transmitter](http://www.vlf.it/zevs/zevs.htm)
-
-* [The Real Cuban Missile Crisis](https://www.theatlantic.com/magazine/archive/2013/01/the-real-cuban-missile-crisis/309190/?single_page=true)
-
-* [Aldous Huxley: The Ultimate Revolution](https://pulsemedia.org/2009/02/02/aldous-huxley-the-ultimate-revolution/)
 
 * [Why did men stop wearing high heels, anyway?](https://qz.com/409254/why-did-men-stop-wearing-high-heels-anyway/)
 
