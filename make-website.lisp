@@ -24,9 +24,10 @@
 
 ;;; Load required packages. Adjust quicklisp location if needed
 (load "~/.quicklisp/setup.lisp")
+(ql:quickload "hunchentoot" :silent T)
 (ql:quickload "cl-markdown" :silent T)
 (ql:quickload "local-time" :silent T)
-(ql::quickload "cl-ppcre" :silent T)
+(ql:quickload "cl-ppcre" :silent T)
 
 ;;;
 ;;; Global configuration variables
@@ -122,3 +123,13 @@
 ;;; Make the website using the functions above
 (defun make-website ()
 	(mapc #'(lambda(fl) (build-file (car fl) (cdr fl))) (sources-alist)))
+
+;;; Run a demo version of the website locally
+(defun run-demo ()
+	(let ((acceptor (hunchentoot:start (make-instance 'hunchentoot:acceptor
+	                 :port 4242 :document-root *target-dir*))))
+		(princ "Insert any input to stop the webserver...")
+		(terpri)
+		(finish-output)
+		(read)
+		(hunchentoot:stop acceptor)))
