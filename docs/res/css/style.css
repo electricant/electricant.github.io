@@ -5,10 +5,14 @@
 	--body-background: 246, 246, 246;
 	--text-color: rgba(0, 0, 0, 0.9);
 	--text-background: rgba(255, 255, 255, 0.9);
+	/* gray background color for tables and code */
+	--gray-background: rgba(0, 0, 0, 0.04);
+	/* font config */
 	--font-size: 21px;
 	--font-size-small-screen: 20px;
 	--font-size-code: 18px;
 	--font-size-code-small-screen: 16px;
+	--line-height: 1.5;
 	/* Box shadows for cards and stuff */
 	--box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.6);
 	/* control edge sharpness for various elements */
@@ -79,8 +83,8 @@ body {
 	border-bottom: 1px solid rgba(var(--body-background), 1);
 }
 .content {
-    margin: 0 auto;
-    width: 57em;
+	margin: 0 auto;
+	width: 57em;
 	min-width: 300px;
 }
 .tile {
@@ -92,7 +96,7 @@ body {
 	margin: 1em;
 }
 .text {
-	line-height: 1.55;
+	line-height: var(--line-height);
 	font-size: var(--font-size);
 	padding: 2em;
 	text-align: justify;
@@ -137,7 +141,7 @@ code {
 	overflow: auto;
 	font-size: var(--font-size-code);
 	padding-left: 1.5em;
-	background-color: rgba(0, 0, 0, 0.05);
+	background-color: var(--gray-background);
 	padding: 1em 1.5em;
 	border: var(--border-default);
 	border-left: 3px solid var(--header-background);
@@ -146,6 +150,35 @@ code {
 
 tt {
 	font-size: var(--font-size-code);
+}
+
+table {
+	border-collapse: collapse;
+	border-radius: var(--border-radius);
+	border: var(--border-default);
+	width: 100%;
+	margin: 0 auto;
+	position: relative
+}
+table thead tr {
+	line-height: calc(var(--line-height)*1.5);
+	background: var(--gray-background);
+}
+tbody tr:nth-child(even) {
+	background-color: var(--gray-background);
+}
+/*tbody tr {
+	line-height: 1.2;
+	font-weight: unset
+}*/
+th {
+	text-align: center;
+}
+td {
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
 }
 
 /* responsive layout */
@@ -167,6 +200,23 @@ tt {
 		width: auto;
 		margin: 0 auto;
 		margin-top: 1em;
+	}
+	table { width: 100% }
+	thead { display: none }
+	tbody tr:nth-child(even) { background-color: var(--text-background); }
+	tr td:first-child {
+		background: var(--gray-background);
+		font-weight: bold;
+		text-align: center;
+	}
+	tbody td {
+		display: block;
+		text-align: right;
+	}
+	tbody td:before {
+		content: attr(data-th);
+		position: absolute;
+		left: 1em;
 	}
 }
 @media (max-width: 640px) {
