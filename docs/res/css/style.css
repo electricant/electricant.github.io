@@ -140,12 +140,12 @@ code {
 	display: block;
 	overflow: auto;
 	font-size: var(--font-size-code);
-	padding-left: 1.5em;
 	background-color: var(--gray-background);
 	padding: 1em 1.5em;
 	border: var(--border-default);
 	border-left: 3px solid var(--header-background);
 	border-radius: var(--border-radius);
+	text-align: left;
 }
 
 tt {
@@ -167,11 +167,7 @@ table thead tr {
 tbody tr:nth-child(even) {
 	background-color: var(--gray-background);
 }
-/*tbody tr {
-	line-height: 1.2;
-	font-weight: unset
-}*/
-th {
+th, tr {
 	text-align: center;
 }
 td {

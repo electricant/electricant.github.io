@@ -8,13 +8,13 @@
 <meta name=\"MobileOptimized\" content=\"320\">
 <meta name=\"description\" content=\"Pol's website. " extratitle "\"/>
 
-<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"res/img/favicon192.png\">
-<link rel=\"icon\" type=\"image/png\" sizes=\"128x128\" href=\"res/img/favicon128.png\">
-<link rel=\"icon\" type=\"image/png\" sizes=\"64x64\" href=\"res/img/favicon64.png\">
-<link rel=\"shortcut-icon\" type=\"image/png\" href=\"res/img/favicon64.png\">
+<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"/res/img/favicon192.png\">
+<link rel=\"icon\" type=\"image/png\" sizes=\"128x128\" href=\"/res/img/favicon128.png\">
+<link rel=\"icon\" type=\"image/png\" sizes=\"64x64\" href=\"/res/img/favicon64.png\">
+<link rel=\"shortcut-icon\" type=\"image/png\" href=\"/res/img/favicon64.png\">
 
-<link rel=\"stylesheet\" href=\"res/css/style.css\">
-<link rel=\"styleshet\" href=\"res/css/foundation-icons.css\">
+<link rel=\"stylesheet\" href=\"/res/css/style.css\">
+<link rel=\"styleshet\" href=\"/res/css/foundation-icons.css\">
 
 <title>Paolo Scaramuzza" (if extratitle (concatenate 'string " | " extratitle))
 "</title>
