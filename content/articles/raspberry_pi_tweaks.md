@@ -136,6 +136,7 @@ https://raspberrypi.stackexchange.com/questions/92462/installing-watchdog-daemon
 
 ## References
 
+<div class="references">
 \[1\] [fake-hwclock for Arch Linux Arm on Raspberry Pi (using systemd)][1]
 [1]: https://archplusplus.co.uk/post/40202081414/fake-hwclock-for-arch-linux-arm-on-raspberry-pi
 
@@ -153,4 +154,4 @@ https://raspberrypi.stackexchange.com/questions/92462/installing-watchdog-daemon
 
 \[6\] [Improving performance - ArchWiki][6]
 [6]: https://wiki.archlinux.org/title/Improving_performance#zram_or_zswap
-
+</div>

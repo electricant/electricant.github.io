@@ -100,7 +100,7 @@ pinout, looking for a serial port of some kind.
 
 In the above picture I cut the relevant part of the datasheet, showing the
 pinout of the chip. In the bottom-right part there are two pins (pin 36
-and 37) labelled __UART\_RX/GPIOA7__ and __UART\_TX/GPIOB0__
+and 37) labelled <b>UART\_RX/GPIOA7</b> and <b>UART\_TX/GPIOB0</b>
 respectively. Those pins can be configured either as GPIOs (for controlling the
 router LEDs etc.) or as a serial port. I traced those two pins with a multimeter
 and they are routed to the unpopulated header labelled __J1__. Most likely,
@@ -874,6 +874,7 @@ to try to hack another router, maybe I will be luckier this time (stay tuned).
 
 ## References
 
+<div class="references">
 \[1\] [Netis WF2419I][1]
 [1]: http://www.netis-systems.com/Suppory/de_details/id/1/de/181.html
 
@@ -921,4 +922,4 @@ to try to hack another router, maybe I will be luckier this time (stay tuned).
 
 \[16\] [Lexra - LinuxMIPS][16]
 [16]: https://www.linux-mips.org/wiki/Lexra
-
+</div>

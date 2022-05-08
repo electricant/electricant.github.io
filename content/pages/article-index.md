@@ -1,4 +1,6 @@
 # Articles by Date
+
+<div class="toc">
 1. [2022](#2022)
 	1. [May](#2022may)
 	2. [February](#2022february)
@@ -9,6 +11,7 @@
 	1. [August](#2020august)
 	2. [April](#2020april)
 4. [Older](#older)
+</div>
 
 ## 2022 <a name="2022"></a>
 

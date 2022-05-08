@@ -257,6 +257,7 @@ P.P.S. I received full refund for the broken OUIO card. Always ask for a refund!
 
 ## References
 
+<div class="references">
 \[1\] [gateway_collection/atlas - electricant][1]
 [1]: https://github.com/electricant/gateway_collection/tree/master/atlas
 
@@ -280,3 +281,4 @@ P.P.S. I received full refund for the broken OUIO card. Always ask for a refund!
 
 \[8\] [Fake card not detected by f3probe][8]
 [8]: https://github.com/AltraMayor/f3/issues/180
+</div>

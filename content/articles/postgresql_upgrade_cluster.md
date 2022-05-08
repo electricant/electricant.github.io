@@ -131,6 +131,7 @@ sorry.
 
 ## Further Reading
 
+<div class="references">
 \[1\] [Start PostgreSQL on Debian 8][1]
 [1]: /articles/postgresql_start_debian.html
 
@@ -151,4 +152,4 @@ sorry.
 
 \[7\] [DebianGis/UpdatingPostGIS - Debian Wiki][7]
 [7]: https://wiki.debian.org/DebianGis/UpdatingPostGIS
-
+</div>
