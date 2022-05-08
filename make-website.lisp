@@ -128,7 +128,9 @@
 (defun run-demo ()
 	(let ((acceptor (hunchentoot:start (make-instance 'hunchentoot:acceptor
 	                 :port 4242 :document-root *target-dir*))))
-		(princ "Insert any input to stop the webserver...")
+        (princ "Demo available at http://localhost:4242")
+        (terpri)
+		(princ "Insert any input to stop the webserver.")
 		(terpri)
 		(finish-output)
 		(read)
