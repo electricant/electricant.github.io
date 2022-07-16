@@ -202,6 +202,12 @@ Table of contents:
 
 * [Salary Negotiation: Make More Money, Be More Valued](https://www.kalzumeus.com/2012/01/23/salary-negotiation/)
 
+* [Curated list of valuable salary negotiation advice](https://github.com/petermekhaeil/salary-negotiating)
+
+* [Questions to ask the company during your interview ](https://github.com/viraptor/reverse-interview/)
+	<br/>And also the HN discussion from where this link came from:
+	<br/>[Job interview questions engineers should ask, but don't](https://news.ycombinator.com/item?id=31906933)
+
 * [Don't Call Yourself A Programmer, And Other Career Advice](https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/)
 	<br/>Intresting, albeit cinical view of why companies hire engineers.
 	<br/>*"Engineers are hired to create business value, not to program
@@ -273,6 +279,8 @@ people general.
 	fellow citizens – in mutually beneficial activities."*
 
 ## Guides, Lectures and Books <a name="guides-lectures-books"></a>
+
+* [What’s the best lossless image format?](https://siipo.la/blog/whats-the-best-lossless-image-format-comparing-png-webp-avif-and-jpeg-xl)
 
 * [Inversion and The Power of Avoiding Stupidity](https://fs.blog/inversion/)
 	<br/>*"It is not enough to think about difficult problems one way. You
