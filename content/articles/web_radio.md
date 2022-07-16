@@ -2,7 +2,13 @@
 
 Direct streaming links to web radios I like to listen to. A valid source of web radios is [RadioBrowser](https://www.radio-browser.info/).
 
-Last updated on: 14 February 2022.
+Last updated on: 16 July 2022.
+
+### Ragio Bob
+
+[homepage](https://www.radiobob.si/)
+
+[streaming URL](https://live.radio.si/BOB)
 
 ### Groove Salad
 
