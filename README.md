@@ -1,1 +1,1 @@
-Source files for my website and blog, available at [scaramuzza.me](https://scaramuzza.me).
+Source files for my website and blog, available at [blog.scaramuzza.me](https://blog.scaramuzza.me).
