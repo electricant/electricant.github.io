@@ -17,6 +17,13 @@ Table of contents:
 
 ## Articles <a name="articles"></a>
 
+* [Out of the Wild](https://www.thenewatlantis.com/publications/out-of-the-wild)
+    <br/>Wonderful article about the human tendency to position themselves as
+    protectors of the natural order. This is based on a idealized notion of the
+    wild which does not actually belong to nature. I enjoyed learning that
+    humpback whales show a simiar behavior: they sometimes protect seals from
+    killer whales.
+
 * [Dancoland](https://alexdanco.com/2021/08/21/dancoland/)
 	<br/>Thoughtful intorduction to systems thinking. To be re-read from time to time.
 
@@ -280,6 +287,21 @@ people general.
 
 ## Guides, Lectures and Books <a name="guides-lectures-books"></a>
 
+* [The art of listening](https://aeon.co/essays/the-psychologist-carl-rogers-and-the-art-of-active-listening)
+
+* [What is Nmap and How to Use it – A Tutorial for the Greatest Scanning Tool of All Time](https://www.freecodecamp.org/news/what-is-nmap-and-how-to-use-it-a-tutorial-for-the-greatest-scanning-tool-of-all-time)
+
+* [A Visual Guide to SSH Tunnels: Local and Remote Port Forwarding](https://iximiuz.com/en/posts/ssh-tunnels/)
+
+* [A Vim Guide for Advanced Users](https://thevaluable.dev/vim-advanced/)
+
+* [How To Ask Questions The Smart Way](www.catb.org/~esr/faqs/smart-questions.html)
+
+* [linux-insides](https://0xax.gitbooks.io/linux-insides/content/)
+    <br/>A book-in-progress about the linux kernel and its insides.
+
+* [Lessons in Electric Circuits](https://www.allaboutcircuits.com/textbook/)
+
 * [What’s the best lossless image format?](https://siipo.la/blog/whats-the-best-lossless-image-format-comparing-png-webp-avif-and-jpeg-xl)
 
 * [Inversion and The Power of Avoiding Stupidity](https://fs.blog/inversion/)
@@ -305,7 +327,6 @@ people general.
 * [Calculus Made Easy](https://calculusmadeeasy.org/)
 
 * [The Availability Bias: How to Overcome a Common Cognitive Distortion](https://fs.blog/availability-bias-cognitive-distortion/)
-
 
 * [Le Monde's 100 Books of the Century](https://en.wikipedia.org/wiki/Le_Monde%27s_100_Books_of_the_Century)
 	<br/>List of books in case I'm in search for something to read
@@ -364,18 +385,21 @@ people general.
 
 ### Programming <a name="programming"></a>
 
+* [Bootlin – Embedded Linux and kernel engineering](https://bootlin.com/docs/)
+
+* [Tcl Programming/Tk examples - Wikibooks](https://en.m.wikibooks.org/wiki/Tcl_Programming/Tk_examples)
+
+* [Real World OCaml](http://dev.realworldocaml.org/index.html)
+
+* [OCaml Programming: Correct + Efficient + Beautiful](https://cs3110.github.io/textbook/cover.html)
+
+* [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/)
+
+* [Writing a Simple Operating System - from Scratch](https://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)
+
 * [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)
 
-* [Modern, functional Common Lisp: Myths and tips](https://ambrevar.xyz/modern-common-lisp/index.html)
-
-* [Static type checking in the programmable programming language (Lisp)](https://medium.com/@MartinCracauer/static-type-checking-in-the-programmable-programming-language-lisp-79bb79eb068a)
-
 * [Practical Makefiles, by example](http://nuclear.mutantstargoat.com/articles/make/)
-
-* [Why Lisp?](https://atlas.engineer/technical-article/why-lisp.org)
-	<br/>Getting started with Lisp development
-
-* [A Road to Common Lisp / Steve Losh](http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/)
 
 * [A Quick and Easy Guide to tmux](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)
 
@@ -391,6 +415,21 @@ people general.
 
 * [Bit Twiddling Hacks](http://graphics.stanford.edu/~seander/bithacks.html) <br>
 	List of code snippets for clever bit operations
+
+#### Lisp
+
+* [Why Lisp?](https://atlas.engineer/technical-article/why-lisp.org)
+	<br/>Getting started with Lisp development
+
+* [A Road to Common Lisp / Steve Losh](http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/)
+
+* [Modern, functional Common Lisp: Myths and tips](https://ambrevar.xyz/modern-common-lisp/index.html)
+
+* [Static type checking in the programmable programming language (Lisp)](https://medium.com/@MartinCracauer/static-type-checking-in-the-programmable-programming-language-lisp-79bb79eb068a)
+
+* [Learn Lisp The Hard Way](https://llthw.common-lisp.dev/)
+
+* [Common lisp naming conventions](https://www.cliki.net/Naming+conventions)
 
 ## Short Stories and Essays <a name="short-stories-and-essays"></a>
 
