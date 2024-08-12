@@ -24,7 +24,7 @@ the same TSIG key. When a message is sent, the TSIG key generates a signature
 that is included with the message. The receiving party then uses the same key
 to verify the signature.
 
-Use the `tsig-keygen` [\[5\]][5] command to generate a TSIG key and save it
+Use the **tsig-keygen** [\[5\]][5] command to generate a TSIG key and save it
 into a file for later use.
 
     # tsig-keygen -a HMAC-SHA256 ddns-key.example.com > ddns.key 
@@ -44,8 +44,8 @@ Where:
 
 ## Step 2: Configure BIND9 to Use the TSIG Key
 
-I like to keep the keys in my `named.conf.options` file separated from the zone
-definitions in `named.conf.local`.
+I like to keep the keys in my named.conf.options file separated from the zone
+definitions in named.conf.local.
 
 To allow dynamic updates using the TSIG key, open the BIND9 configuration file:
 
@@ -60,7 +60,7 @@ Add the TSIG key configuration:
 	
 Save and exit the configuration file.
 
-Then, configure the zone (in `/etc/bind/named.conf.local`) to allow updates
+Then, configure the zone (in /etc/bind/named.conf.local) to allow updates
 using the TSIG key:
 
     zone "example.com" IN {
@@ -77,23 +77,23 @@ Apply the changes by restarting the BIND9 service.
 
 ## Step 4: Testing Dynamic DNS Updates
 
-According to the nsupdate man file [\[6\]][6], when using the -k option,
+According to the **nsupdate** man file [\[6\]][6], when using the -k option,
 nsupdate reads the shared secret from a key file. This key file can be in one
 of two formats:
 
 1. **Named.conf-style format**: looks like a BIND configuration file,
 containing the key definition within curly braces. This format matches the
-syntax you'd find in BIND's configuration files (like `named.conf`). When using
+syntax you'd find in BIND's configuration files (like named.conf). When using
 this format, the key file contains a full key definition.
 
 2. **Raw secret format**: contains just the raw base64-encoded
 secret without any additional configuration statements. This format is simpler
 but requires you to specify the key name and algorithm directly in the
-`nsupdate` command.
+**nsupdate** command.
 
-If you followed **Step 1** thoroughly, the key is already saved in `ddns.key`
-with the named.conf-style format. Therefore, it is sufficient to use nsupdate as usual with the
-option `-k ddns.key`.
+If you followed **Step 1** thoroughly, the key is already saved in ddns.key file
+with the named.conf-style format. Therefore, it is sufficient to use nsupdate as
+usual with the option -k ddns.key.
 
 ## References
 
