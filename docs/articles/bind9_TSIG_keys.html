@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="description" content="Pol's website. Guide to Configuring Dynamic DNS with BIND9 Using TSIG Keys"/>
+
+<link rel="icon" type="image/png" sizes="192x192" href="/res/img/favicon192.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/res/img/favicon128.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/res/img/favicon64.png">
+<link rel="shortcut-icon" type="image/png" href="/res/img/favicon64.png">
+
+<link rel="stylesheet" href="/res/css/style.css">
+<link rel="styleshet" href="/res/css/foundation-icons.css">
+
+<title>Paolo Scaramuzza | Guide to Configuring Dynamic DNS with BIND9 Using TSIG Keys</title>
+</head>
+<body>
+<div class="header">
+	<div class="headerdata">
+		<h1><a class="homelink" href="/">Paolo Scaramuzza</a></h1>
+	</div>
+	<div class="navbar">
+		<a href="/">HOME</a> |
+		<a href="/article-index.html">ARTICLES</a> |
+		<a href="/random.html">RANDOM STUFF</a> |
+		<a href="/now.html">NOW</a> |
+		<a href="/about.html">ABOUT</a>
+	</div>
+</div>
+
+<div id="content" class="content">
+	<div id="text" class="tile text">
+	<!-- Article text -->
+<h1>Guide to Configuring Dynamic DNS with BIND9 Using TSIG Keys</h1><p>This guide will walk you through the process of setting up dynamic DNS updates in BIND9 <a href="https://docstore.mik.ua/orelly/networking_2ndEd/dns/ch10_02.htm">[1]</a> using a TSIG key. </p><p>Previously, the most common authentication method for BIND was to use SIG(0) for authentication <a href="https://blog.hqcodeshop.fi/archives/76-Doing-secure-dynamic-DNS-updates-with-BIND.html">[2]</a>, but SIG(0) support has been removed from BIND9. SIG(0) is an older method of authenticating DNS updates, and BIND9 no longer supports it in favor of TSIG <a href="https://bind9.readthedocs.io/en/v9.18.13/chapter7.html#tsig">[3]</a>. </p><p>I learned this the hard way since my dynamic DNS update script was no longer working and I could not understand why. Enabling further debug messages <a href="https://web.mit.edu/darwin/src/modules/bind/bind/doc/html/logging.html">[4]</a> revealed the following: </p><pre><code>request has a SIG(0) signature but its support was removed </code></pre><p>So I had to generate a new key and copy it to both the server and client. </p><h2>Step 1: Generate a TSIG Key</h2><p>TSIG works by using a shared secret key and a hashing algorithm to create a digital signature for each DNS message. Both the client and server must have the same TSIG key. When a message is sent, the TSIG key generates a signature that is included with the message. The receiving party then uses the same key to verify the signature. </p><p>Use the <code>tsig-keygen</code> <a href="https://manpages.debian.org/testing/bind9/tsig-keygen.8.en.html">[5]</a> command to generate a TSIG key and save it into a file for later use. </p><pre><code># tsig-keygen -a HMAC-SHA256 ddns-key.example.com &gt; ddns.key </code></pre><p>This command will generate a key similar to the following: </p><pre><code># cat ddns.key  
+key "ddns-key.example.com." {  
+    algorithm hmac-sha256;  
+    secret "3b52KtNNE87pIHmZkA3bN7Gc5MZK/zAHg0OShp1PvZI=";  
+}; </code></pre><p>Where: </p><ul><li><strong>ddns-key.example.com</strong>: This is the name of the key.</li><li><strong>HMAC-SHA256</strong>: The algorithm used for the key.</li><li><strong>secret</strong>: The actual secret key generated.</li></ul><h2>Step 2: Configure BIND9 to Use the TSIG Key</h2><p>I like to keep the keys in my <code>named.conf.options</code> file separated from the zone definitions in <code>named.conf.local</code>. </p><p>To allow dynamic updates using the TSIG key, open the BIND9 configuration file: </p><pre><code># sudo vim /etc/bind/named.conf.options </code></pre><p>Add the TSIG key configuration: </p><pre><code>key "ddns-key.example.com." {  
+	algorithm hmac-sha256;  
+	secret "3b52KtNNE87pIHmZkA3bN7Gc5MZK/zAHg0OShp1PvZI=";  
+}; </code></pre><p>Save and exit the configuration file. </p><p>Then, configure the zone (in <code>/etc/bind/named.conf.local</code>) to allow updates using the TSIG key: </p><pre><code>zone "example.com" IN {  
+    type master;  
+    file "/etc/bind/db.example.com";  
+    allow-update { key "ddns-key.example.com."; };  
+}; </code></pre><h2>Step 3: Restart BIND9</h2><p>Apply the changes by restarting the BIND9 service. </p><pre><code># sudo systemctl restart named </code></pre><h2>Step 4: Testing Dynamic DNS Updates</h2><p>According to the nsupdate man file <a href="https://www.linux.org/docs/man1/nsupdate.html">[6]</a>, when using the -k option, nsupdate reads the shared secret from a key file. This key file can be in one of two formats: </p><ol><li><p><strong>Named.conf-style format</strong>: looks like a BIND configuration file, containing the key definition within curly braces. This format matches the syntax you'd find in BIND's configuration files (like <code>named.conf</code>). When using this format, the key file contains a full key definition. </p></li><li><p><strong>Raw secret format</strong>: contains just the raw base64-encoded secret without any additional configuration statements. This format is simpler but requires you to specify the key name and algorithm directly in the <code>nsupdate</code> command. </p></li></ol><p>If you followed <strong>Step 1</strong> thoroughly, the key is already saved in <code>ddns.key</code> with the named.conf-style format. Therefore, it is sufficient to use nsupdate as usual with the option <code>-k ddns.key</code>. </p><h2>References</h2><div class="references"> [1] <a href="1">DNS Dynamic Update</a> <p>[2] <a href="2">Doing secure dynamic DNS updates with BIND</a> </p><p>[3] <a href="3">Security Configurations - TSIG</a> </p><p>[4] <a href="4">BIND Configuration File Guide -- logging Statement</a> </p><p>[5] <a href="5">tsig-keygen(8)</a> </p><p>[6] <a href="6">nsupdate(1)</a> </p>
+	</div> <!-- text -->
+</div> <!-- content -->
+</body>
+</html>
+<!-- Build timestamp: 2024-08-12T12:39:35.697914Z -->

@@ -1,6 +1,8 @@
 # Articles by Date
 
 <div class="toc">
+1. [2024](#2024)
+    1. [August](#2024august)
 1. [2022](#2022)
 	1. [May](#2022may)
 	2. [February](#2022february)
@@ -12,6 +14,12 @@
 	2. [April](#2020april)
 4. [Older](#older)
 </div>
+
+## 2024 <a name="2024"></a>
+
+### August <a name="2024august"></a>
+
+* [Guide to Configuring Dynamic DNS with BIND9 Using TSIG Keys](articles/bind9_TSIG_keys.html)
 
 ## 2022 <a name="2022"></a>
 
