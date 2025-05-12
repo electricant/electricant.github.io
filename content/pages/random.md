@@ -24,6 +24,11 @@ Table of contents:
     humpback whales show a simiar behavior: they sometimes protect seals from
     killer whales.
 
+* [A calculator app? Anyone could make that](https://chadnauseam.com/coding/random/calculator-app)
+	<br>The complex and fascinating story behind the development of the
+	Android calculator app, particularly its ability to accurately handle 
+	floating point arithmetic.
+
 * [Dancoland](https://alexdanco.com/2021/08/21/dancoland/)
 	<br/>Thoughtful intorduction to systems thinking. To be re-read from time to time.
 
