@@ -9,7 +9,6 @@ Table of contents:
 1. [Articles](#articles)
 	1. [Society](#society)
 	2. [Work related](#work-related)
-	3. [Car and traffic related](#car-and-traffic)
 	4. [Relationships](#relationships)
 2. [Guides, Lectures and Books](#guides-lectures-books)
 	1. [Programming](#programming)
@@ -243,24 +242,6 @@ Table of contents:
 	for job security, for course load and service, for location)."*
 
 * [Medieval Peasants Got a Lot More Vacation Time Than You](https://nypost.com/2013/09/04/medieval-peasants-got-a-lot-more-vacation-time-than-you-economist/)
-
-### Car and traffic related <a name="car-and-traffic"></a>
-
-It seems as if I quite dislike the idea of being forced to own a car.
-This is a list of articles on such topic.
-
-* [What happens if you turn off the traffic lights?](https://www.theguardian.com/environment/bike-blog/2017/sep/22/what-happens-if-you-turn-off-the-traffic-lights)
-
-* [The forgotten history of how automakers invented the crime of "jaywalking"](https://www.vox.com/2015/1/15/7551873/jaywalking-history)
-
-* [The Absurd Primacy of the Automobile in American Life](http://www.theatlantic.com/business/archive/2016/04/absurd-primacy-of-the-car-in-american-life/476346/?single_page=true)<br/>
-	*"If the price of gasoline and the vehicles that burn it actually
-	reflected the true costs and damage they inflict, the common car would go
-	extinct.  Gasoline would cost way more than $10 a gallon."*
-
-* [The Social Ideology of the Motorcar](http://unevenearth.org/2018/08/the-social-ideology-of-the-motorcar/)
-	<br/>*"This 1973 essay on how cars have taken over our cities remains as
-	relevant as ever"*
 
 ### Relationships <a name="relationships"></a>
 

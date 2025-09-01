@@ -1,19 +1,27 @@
 # Articles by Date
 
 <div class="toc">
-1. [2024](#2024)
+1. [2025](#2025)
+    1. [August](#2025august)
+3. [2024](#2024)
     1. [August](#2024august)
-1. [2022](#2022)
+4. [2022](#2022)
 	1. [May](#2022may)
 	2. [February](#2022february)
-2. [2021](#2021)
+5. [2021](#2021)
 	1. [September](#2021september)
 	2. [January](#2021january)
-3. [2020](#2020)
+6. [2020](#2020)
 	1. [August](#2020august)
 	2. [April](#2020april)
-4. [Older](#older)
+7. [Older](#older)
 </div>
+
+## 2025 <a name="2025"></a>
+
+### August <a name="2025august"></a>
+
+* [The Car Is Not the Future: On the Myth of Motorized Freedom](articles/the_car_is_not_the_future.html)
 
 ## 2024 <a name="2024"></a>
 
