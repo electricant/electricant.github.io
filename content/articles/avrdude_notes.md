@@ -9,7 +9,7 @@ programmers, including:
 - **AVRISP mkII** (ISP/PDI/TPI programmer, see Appendix A for legacy setup)  
 
 This article collects practical usage notes, examples, and troubleshooting tips
-when working with `avrdude` on GNU/Linux.
+when working with <tt>avrdude</tt> on GNU/Linux.
 
 ## Example Session with SerialUPDI (ATtiny816)
 
@@ -72,39 +72,35 @@ Detected memory areas:
 
 ### Memory Operations (-U)
 
-* `flash:r|w|v:<file>` - read/write/verify flash
-* `eeprom:r|w|v:<file>` - read/write/verify EEPROM
-* `fuses:r|w:<file>` - access fuse bytes
-* `userrow:r|w:<file>` - read/write the USERROW
+* <tt>flash:r|w|v:<file></tt> - read/write/verify flash
+* <tt>eeprom:r|w|v:<file></tt> - read/write/verify EEPROM
+* <tt>fuses:r|w:<file></tt> - access fuse bytes
+* <tt>userrow:r|w:<file></tt> - read/write the USERROW
 
 ### File formats (:fmt)
 
-* `:a` - auto-detect
-* `:b` - 0b-binary byte list
-* `:d` - decimal byte list
-* `:e` - ELF
-* `:h` - 0x-hexadecimal byte list
-* `:i` - Intel Hex
-* `:I` - Intel Hex with comments
-* `:m` - in-place immediate
-* `:o` - octal byte list
-* `:r` - raw binary
-* `:R` - R byte list
-* `:s` - Motorola S-Record
+* <tt>:a</tt> - auto-detect
+* <tt>:b</tt> - 0b-binary byte list
+* <tt>:d</tt> - decimal byte list
+* <tt>:e</tt> - ELF
+* <tt>:h</tt> - 0x-hexadecimal byte list
+* <tt>:i</tt> - Intel Hex
+* <tt>:I</tt> - Intel Hex with comments
+* <tt>:m</tt> - in-place immediate
+* <tt>:o</tt> - octal byte list
+* <tt>:r</tt> - raw binary
+* <tt>:R</tt> - R byte list
+* <tt>:s</tt> - Motorola S-Record
 
 ## Practical Examples
 
 ### Read EEPROM
 
-```
-avrdude -v -p t816 -c serialupdi -P /dev/ttyUSB0 -U eeprom:r:-:h
-```
+	avrdude -v -p t816 -c serialupdi -P /dev/ttyUSB0 -U eeprom:r:-:h
 
 ### Read USERROW
 
-```
-avrdude -v -p t816 -c serialupdi -P /dev/ttyUSB0 -U userrow:r:-:h
-```
+	avrdude -v -p t816 -c serialupdi -P /dev/ttyUSB0 -U userrow:r:-:h
 
 ### Interacrive shell
 
@@ -128,11 +124,9 @@ avrdude -v -p t816 -c serialupdi -P /dev/ttyUSB0 -U userrow:r:-:h
 
 	erase flash; erase eeprom; flush
 
-The shell session can also be condensed as a single `-T` command invocation:
+The shell session can also be condensed as a single <tt>-T</tt> command invocation:
 
-```
-avrdude -v -pt816 -cserialupdi -P /dev/ttyUSB0 -T 'write userrow 0 0x1 0 255 16; flush'
-```
+	avrdude -v -pt816 -cserialupdi -P /dev/ttyUSB0 -T 'write userrow 0 0x1 0 255 16; flush'
 
 ## Appendix A – AVRISP mkII Setup Guide (Legacy)
 
@@ -174,19 +168,15 @@ compile the firmware for Atmel microcontrollers.
 
 As root run:
 
-```
 	# apt-get install wget bison automake autoconf flex gcc libelf-dev
 	libusb-dev libusb-1.0-0-dev libftdi-dev libftdi1-dev`
-```
 
 #### Red Hat/Centos/Fedora
 
 As root run:
 
-```
 	# yum install wget bison automake autoconf flex gcc patch
 	elfutils-libelf-devel libusb-devel libftdi-devel`
-```
 
 ### Compiling and Installing avrdude
 
