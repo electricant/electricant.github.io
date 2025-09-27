@@ -2,7 +2,8 @@
 
 <div class="toc">
 1. [2025](#2025)
-    1. [August](#2025august)
+    1. [September](#2025sep)
+    2. [August](#2025august)
 3. [2024](#2024)
     1. [August](#2024august)
 4. [2022](#2022)
@@ -18,6 +19,10 @@
 </div>
 
 ## 2025 <a name="2025"></a>
+
+### September <a name="2025sep"></a>
+
+* [Notes on Using Avrdude](articles/avrdude_notes.html)
 
 ### August <a name="2025august"></a>
 
@@ -77,6 +82,3 @@
 
 * [Start PostgreSQL on Debian 8](/articles/postgresql_start_debian.html)
 
-### March 2016
-
-* [Using the AVRISP mkII With GNU/Linux](/articles/avrisp_mk2.html)
