@@ -76,7 +76,18 @@
 -t               Start interactive terminal  
 -v               Verbose (repeat for more detail)  
 -q               Quell progress output  
--T &lt;terminal cmd line&gt; Run terminal line when it is its turn </code></pre><h3>Memory Operations (-U)</h3><ul><li><tt>flash:r|w|v:<file> </tt>  - read/write/verify flash</li><li><tt>eeprom:r|w|v:<file> </tt>  - read/write/verify EEPROM</li><li><tt>fuses:r|w:<file> </tt>  - access fuse bytes</li><li><tt>userrow:r|w:<file> </tt>  - read/write the USERROW</li></ul><h3>File formats (:fmt)</h3><ul><li><tt>:a</tt>  - auto-detect</li><li><tt>:b</tt>  - 0b-binary byte list</li><li><tt>:d</tt>  - decimal byte list</li><li><tt>:e</tt>  - ELF</li><li><tt>:h</tt>  - 0x-hexadecimal byte list</li><li><tt>:i</tt>  - Intel Hex</li><li><tt>:I</tt>  - Intel Hex with comments</li><li><tt>:m</tt>  - in-place immediate</li><li><tt>:o</tt>  - octal byte list</li><li><tt>:r</tt>  - raw binary</li><li><tt>:R</tt>  - R byte list</li><li><tt>:s</tt>  - Motorola S-Record</li></ul><h2>Practical Examples</h2><h3>Read EEPROM</h3><pre><code>avrdude -v -p t816 -c serialupdi -P /dev/ttyUSB0 -U eeprom:r:-:h </code></pre><h3>Read USERROW</h3><pre><code>avrdude -v -p t816 -c serialupdi -P /dev/ttyUSB0 -U userrow:r:-:h </code></pre><h3>Interacrive shell</h3><pre><code>avrdude -v -pt816 -cserialupdi -P /dev/ttyUSB0 -t  
+-T &lt;terminal cmd line&gt; Run terminal line when it is its turn </code></pre><h3>Memory Operations (-U)</h3><ul><li><tt>flash:r|w|v:<file> </tt>  - read/write/verify flash</li><li><tt>eeprom:r|w|v:<file> </tt>  - read/write/verify EEPROM</li><li><tt>fuses:r|w:<file> </tt>  - access fuse bytes</li><li><tt>userrow:r|w:<file> </tt>  - read/write the USERROW</li></ul><h3>File formats (:fmt)</h3><ul><li><tt>:a</tt>  - auto-detect</li><li><tt>:b</tt>  - 0b-binary byte list</li><li><tt>:d</tt>  - decimal byte list</li><li><tt>:e</tt>  - ELF</li><li><tt>:h</tt>  - 0x-hexadecimal byte list</li><li><tt>:i</tt>  - Intel Hex</li><li><tt>:I</tt>  - Intel Hex with comments</li><li><tt>:m</tt>  - in-place immediate</li><li><tt>:o</tt>  - octal byte list</li><li><tt>:r</tt>  - raw binary</li><li><tt>:R</tt>  - R byte list</li><li><tt>:s</tt>  - Motorola S-Record</li></ul><h2>Practical Examples</h2><h3>Read EEPROM</h3><pre><code>avrdude -v -p t816 -c serialupdi -P /dev/ttyUSB0 -U eeprom:r:-:h </code></pre><h3>Read USERROW</h3><pre><code>avrdude -v -p t816 -c serialupdi -P /dev/ttyUSB0 -U userrow:r:-:h </code></pre><p>Saay you want to read the data stored in the userrow directly, the C code is the following: </p><pre><code>/**  
+ * Start address for the USERROW segment containing configuration data  
+ */  
+#define USERROW_CONFIG_BASE 0x1300  
+ 
+// The USERROW is memory mapped  
+typedef struct {  
+	uint8_t var1;  
+	[...]  
+	uint8_t varN;  
+} userrow_struct_t;  
+#define userrow (*(volatile const userrow_struct_t *)USERROW_CONFIG_BASE) </code></pre><h3>Dump USERROW/EEPROM</h3><pre><code>avrdude -v -pt816 -cserialupdi -P /dev/ttyUSB0 -T 'dump eeprom' </code></pre><p>For the userrow: <code>dump userrow</code>. </p><h3>Interacrive shell</h3><pre><code>avrdude -v -pt816 -cserialupdi -P /dev/ttyUSB0 -t  
  
 dump userrow  
  
@@ -101,4 +112,4 @@ elfutils-libelf-devel libusb-devel libftdi-devel` </code></pre><h3>Compiling and
 </div> <!-- content -->
 </body>
 </html>
-<!-- Build timestamp: 2025-09-27T11:32:56.410205+02:00 -->
+<!-- Build timestamp: 2025-12-05T09:46:26.368539+01:00 -->

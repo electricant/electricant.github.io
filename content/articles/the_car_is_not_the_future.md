@@ -1,5 +1,13 @@
 # The Car Is Not the Future: On the Myth of Motorized Freedom
 
+<figure>
+	<a href="https://xkcd.com/3167" target="_blank">
+		<img src="https://imgs.xkcd.com/comics/car_size.png"
+			alt="xkcd 3167">
+	</a>
+	<figcaption>Of course there's an xkcd for that.</figcaption>
+</figure>
+
 I’ve always felt uneasy about the idea that owning a car is somehow a default
 requirement for adult life. It’s not just the cost or the maintenance, it’s the
 deeper realization that cities, economies, and even social expectations are

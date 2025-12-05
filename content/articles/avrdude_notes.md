@@ -102,6 +102,28 @@ Detected memory areas:
 
 	avrdude -v -p t816 -c serialupdi -P /dev/ttyUSB0 -U userrow:r:-:h
 
+Saay you want to read the data stored in the userrow directly, the C code is the
+following:
+
+	/**
+	 * Start address for the USERROW segment containing configuration data
+	 */
+	#define USERROW_CONFIG_BASE 0x1300
+
+	// The USERROW is memory mapped
+	typedef struct {
+		uint8_t var1;
+		[...]
+		uint8_t varN;
+	} userrow_struct_t;
+	#define userrow (*(volatile const userrow_struct_t *)USERROW_CONFIG_BASE)
+
+### Dump USERROW/EEPROM
+
+	avrdude -v -pt816 -cserialupdi -P /dev/ttyUSB0 -T 'dump eeprom'
+
+For the userrow: `dump userrow`.
+
 ### Interacrive shell
 
 	avrdude -v -pt816 -cserialupdi -P /dev/ttyUSB0 -t
