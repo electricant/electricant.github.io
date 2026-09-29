@@ -1,1 +1,1 @@
-Source files for my website and blog, available at [blog.scaramuzza.me](https://blog.scaramuzza.me).
+Source files for my website and blog, available at [electricant.github.io](https://electricant.github.io).
